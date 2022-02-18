@@ -1,0 +1,30 @@
+(base) C:\Users\Ashish Jain>conda env list
+# conda environments:
+#
+base                  *  E:\programfiles\Anaconda3
+bert_aas                 E:\programfiles\Anaconda3\envs\bert_aas
+e20200909                E:\programfiles\Anaconda3\envs\e20200909
+env_py_36                E:\programfiles\Anaconda3\envs\env_py_36
+linkedin_scraping        E:\programfiles\Anaconda3\envs\linkedin_scraping
+pegasus                  E:\programfiles\Anaconda3\envs\pegasus
+py39                     E:\programfiles\Anaconda3\envs\py39
+rasa_env                 E:\programfiles\Anaconda3\envs\rasa_env
+rasa_env_2               E:\programfiles\Anaconda3\envs\rasa_env_2
+selenium                 E:\programfiles\Anaconda3\envs\selenium
+snorkel_env              E:\programfiles\Anaconda3\envs\snorkel_env
+string_env               E:\programfiles\Anaconda3\envs\string_env
+temp                     E:\programfiles\Anaconda3\envs\temp
+temp202009               E:\programfiles\Anaconda3\envs\temp202009
+tf                       E:\programfiles\Anaconda3\envs\tf
+
+
+
+
+
+
+
+
+
+
+
+
