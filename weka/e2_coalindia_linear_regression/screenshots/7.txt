@@ -1,0 +1,170 @@
+You save a trained classifier with the -d option (dumping), e.g.:
+
+ java weka.classifiers.trees.J48 -C 0.25 -M 2 -t /some/where/train.arff -d /other/place/j48.model
+
+And you can load it with -l and use it on a test set, e.g.:
+
+ java weka.classifiers.trees.J48 -l /other/place/j48.model -T /some/where/test.arff
+
+Note, when loading a model you no longer need to supply specific parameters to the classifier.
+
+
+
+
+For our problem:
+
+$ java weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4 -t /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/COALINDIA_NSE_20110101_20220302_CLOSEPRICE_DAYCNT.csv -d /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/lin_reg.model
+
+(base) ashish@ashish-VirtualBox:~/Desktop/ws/weka/e2_coalindia_linear_regression$ java weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4 -t /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/COALINDIA_NSE_20110101_20220302_CLOSEPRICE_DAYCNT.csv -d /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/lin_reg.model
+Error: Could not find or load main class weka.classifiers.functions.LinearRegression
+Caused by: java.lang.ClassNotFoundException: weka.classifiers.functions.LinearRegression
+
+
+
+
+
+
+
+
+
+
+
+
+(base) ashish@ashish-VirtualBox:~/Desktop/ws/programfiles/weka-3-8-6$ java weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4 -t /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/COALINDIA_NSE_20110101_20220302_CLOSEPRICE_DAYCNT.csv -d /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/lin_reg.model
+Error: Could not find or load main class weka.classifiers.functions.LinearRegression
+Caused by: java.lang.ClassNotFoundException: weka.classifiers.functions.LinearRegression
+
+
+
+
+
+
+
+
+
+(base) ashish@ashish-VirtualBox:~/Desktop/ws/programfiles/weka-3-8-6$ ls -l
+total 49816
+drwxr-xr-x 2 ashish ashish     4096 Jan 25 16:07 changelogs
+-rw-r--r-- 1 ashish ashish    35147 Jan 25 16:06 COPYING
+drwxr-xr-x 2 ashish ashish     4096 Jan 25 16:07 data
+drwxr-xr-x 6 ashish ashish     4096 Jan 25 16:07 doc
+-rw-r--r-- 1 ashish ashish      510 Jan 25 16:06 documentation.css
+-rw-r--r-- 1 ashish ashish     1872 Jan 25 16:06 documentation.html
+drwxr-xr-x 3 ashish ashish     4096 Jan 25 16:07 jre
+-rw-r--r-- 1 ashish ashish    16169 Jan 25 16:06 README
+-rw-r--r-- 1 ashish ashish    41269 Jan 25 16:06 remoteExperimentServer.jar
+-rw-r--r-- 1 ashish ashish 14836242 Jan 25 16:06 wekaexamples.zip
+-rw-rw-r-- 1 ashish ashish    52116 Mar  3 15:53 weka_experiment2346552008383362811.arff
+-rw-r--r-- 1 ashish ashish    30414 Jan 25 16:06 weka.gif
+-rw-r--r-- 1 ashish ashish   359270 Jan 25 16:06 weka.ico
+-rw-r--r-- 1 ashish ashish 14163929 Jan 25 16:06 weka.jar
+-rw-r--r-- 1 ashish ashish  6602006 Jan 25 16:06 WekaManual.pdf
+-rwxr-xr-x 1 ashish ashish    14579 Jan 25 16:07 weka.sh
+-rw-r--r-- 1 ashish ashish 14819275 Jan 25 16:06 weka-src.jar
+(base) ashish@ashish-VirtualBox:~/Desktop/ws/programfiles/weka-3-8-6$ chmod 777 weka.jar
+(base) ashish@ashish-VirtualBox:~/Desktop/ws/programfiles/weka-3-8-6$ ls -l
+total 49816
+drwxr-xr-x 2 ashish ashish     4096 Jan 25 16:07 changelogs
+-rw-r--r-- 1 ashish ashish    35147 Jan 25 16:06 COPYING
+drwxr-xr-x 2 ashish ashish     4096 Jan 25 16:07 data
+drwxr-xr-x 6 ashish ashish     4096 Jan 25 16:07 doc
+-rw-r--r-- 1 ashish ashish      510 Jan 25 16:06 documentation.css
+-rw-r--r-- 1 ashish ashish     1872 Jan 25 16:06 documentation.html
+drwxr-xr-x 3 ashish ashish     4096 Jan 25 16:07 jre
+-rw-r--r-- 1 ashish ashish    16169 Jan 25 16:06 README
+-rw-r--r-- 1 ashish ashish    41269 Jan 25 16:06 remoteExperimentServer.jar
+-rw-r--r-- 1 ashish ashish 14836242 Jan 25 16:06 wekaexamples.zip
+-rw-rw-r-- 1 ashish ashish    52116 Mar  3 15:53 weka_experiment2346552008383362811.arff
+-rw-r--r-- 1 ashish ashish    30414 Jan 25 16:06 weka.gif
+-rw-r--r-- 1 ashish ashish   359270 Jan 25 16:06 weka.ico
+-rwxrwxrwx 1 ashish ashish 14163929 Jan 25 16:06 weka.jar
+-rw-r--r-- 1 ashish ashish  6602006 Jan 25 16:06 WekaManual.pdf
+-rwxr-xr-x 1 ashish ashish    14579 Jan 25 16:07 weka.sh
+-rw-r--r-- 1 ashish ashish 14819275 Jan 25 16:06 weka-src.jar
+(base) ashish@ashish-VirtualBox:~/Desktop/ws/programfiles/weka-3-8-6$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+LOADING MODEL AND TESTING:
+$ java weka.classifiers.functions.LinearRegression -l /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/lin_reg.model -T /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/test.csv
+ 
+ 
+ 
+ > java weka.classifiers.functions.LinearRegression -l /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/lin_reg.model -T /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/test.csv
+
+
+Weka exception: training and test set are not compatible
+Class index differ: 1 != 2
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+...
+...
+...
+
+
+
+
+
+
+
+
+
+
+
+
+SIMPLECLI:
+> java weka.classifiers.functions.LinearRegression -l /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/lin_reg.model -T /home/ashish/Desktop/ws/weka/e2_coalindia_linear_regression/test.arff
+
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+Close Price =
+
+     -0.0561 * day_cnt +
+    391.7772
+
+Time taken to build model: 0 seconds
+
+Time taken to test model on test data: 0.02 seconds
+
+=== Error on test data ===
+
+Total Number of Instances                0     
+Ignored Class Unknown Instances                299     
+
+
+

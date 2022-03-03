@@ -1,0 +1,37 @@
+{
+	"flow_name" : "e1_linear_regression",
+	"steps" : [
+		{
+			"class" : "weka.knowledgeflow.steps.Classifier",
+			"properties" : {
+				"classifier" : {
+					"type" : "optionHandler",
+					"class" : "weka.classifiers.functions.LinearRegression",
+					"options" : "-S 0 -R 1.0E-8 -num-decimal-places 4"
+				},
+				"loadClassifierFileName" : "",
+				"name" : "LinearRegression",
+				"resetIncrementalClassifier" : false,
+				"updateIncrementalClassifier" : true
+			},
+			"connections" : {
+			},
+			"coordinates" : "235,157"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Loader",
+			"properties" : {
+				"loader" : {
+					"type" : "loader",
+					"class" : "weka.core.converters.ArffLoader",
+					"filePath" : "/home/ashish/Desktop/ws/boston.arff",
+					"useRelativePath" : false
+				},
+				"name" : "ArffLoader"
+			},
+			"connections" : {
+			},
+			"coordinates" : "59,157"
+		}
+	]
+}
