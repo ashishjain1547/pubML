@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+N:;Suddu;;;
+FN:Suddu
+item1.TEL:+91 99711 20345
+item1.X-ABLabel:Phone
+item2.ADR;type=Home:;;;;Delhi;;India
+item2.X-ABADR:in
+END:VCARD
