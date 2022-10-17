@@ -52,148 +52,147 @@ Follow him.	उसका पीछा करो।,uska pichha karo.
 I am tired.	मैं थक गया हूँ।,mai thak gaya hu.
 I can swim.	मुझे तैरना आता है।,mujhe tairna ata hai.
 I can swim.	मैं तैर सकता हूँ।,mai tair sakta hu.
-I love you.	मैं तुमसे प्यार करती हूँ।,mai tumse pyar kartu hu.
-I love you.	मैं तुमसे प्यार करता हूँ।
-I love you.	मैं आपसे प्यार करता हूँ।
-I love you.	मैं आपसे प्यार करती हूँ।
-I love you.	मुझे तुमसे प्यार है।
-I will try.	मैं कोशिश करूँगा।
-I'm coming.	मैं आ रहा हूँ।
-I'm hungry!	मुझे भूख लगी है!
-I'm hungry!	मुझे भूख लगी है।
-Let him in.	उसे अंदर भेजो।
-Let him in.	उसे अंगर आने दो।
-Let me out!	मुझे बाहर जाने दो!
-Once again.	और एक बार।
-Please sit.	बैठिए।
-What's new?	क्या नया है?
-What's new?	नया क्या है?
-Who's that?	वह कौन है?
-Don't shout.	चिल्लाओ मत!
-Don't shout.	चिल्लाईए मत।
-He stood up.	वह खड़ा हो गया।
-He's strong.	वह ताकतवर है।
-How are you?	आप कैसे हैं?
-How are you?	तुम कैसे हो?
-How are you?	तुम कैसी हो?
-How are you?	तू कैसा है?
-How are you?	तू कैसी है?
-How are you?	आप कैसी हैं?
-How are you?	आप कैसे हो?
-I am hungry.	मुझे भूख लगी है।
-I like both.	मुझे दोनो पसंद हैं।
-I like cake.	मुझे केक अच्छा लगता है।
-I like dogs.	मुझे कुत्ते अच्छे लगते हैं।
-I like math.	मुझे गणित पसंद है।
-I'll attend.	मैं आऊंगा।
-Nobody came.	कोई नहीं आया।
-Was I wrong?	क्या मैं ग़लत था?
-What's this?	यह क्या है?
-Are you sick?	क्या तुम बीमार हो?
-Bring him in.	उसको अंदर ले आओ।
-Come with us.	हमारे साथ आओ।
-Happy Easter!	एसटर मुबारक हो!
-Has Tom left?	टॉम चला गया क्या?
-He is French.	वह फ़्रानसीसी है।
-I am at home.	मैं घर पर हूँ।
-I can't move.	मैं हिल नहीं सकता।
-I don't know.	मुझे नहीं पता।
-I don't know.	मुझे नहीं मालूम।
-I have a car.	मेरे पास एक गाड़ी है।
-I have a dog.	मेरे पास एक कुत्ता है।
-I understand.	मैं समझता हूँ।
-I'm a doctor.	मैं डॉक्टर हूँ।
-I'm starving!	मैं भूख से मरा जा रहा हूँ।
-It is a book.	यह किताब है।
-It's snowing.	बरफ़ गिर रही है।
-It's too big.	बहुत ज़्यादा बड़ा है।
-Please leave.	कृपया जाईये।
-Unbelievable!	अविश्वसनीय!
-We are happy.	हम खुश हैं।
-What is this?	यह क्या है?
-Are you tired?	थक गए हो क्या?
-Can you drive?	तुम गाड़ी चला सकते हो क्या?
-Don't get fat.	मोटे मत हो जाना।
-Don't give in.	हार मत मान लो।
-Drink it down.	पीकर खतम करदो।
-Everyone dies.	मौत तो सभी की होती है।
-Flowers bloom.	फूल खिलते हैं।
-I am who I am.	मैं हूँ जो हूँ।
-I'll take him.	मैं उसे लेलूँगा।
-I'm tired now.	मैं अब थक गया हूँ।
-I'm very busy.	मैं बहुत व्यस्थ हूँ।
-Is that a cat?	वह बिल्ली है क्या?
-It's for free.	यह मुफ़्त है।
-It's for free.	यह मुफ़्त का है।
-Let me try it.	मुझे दिखाओ।
-Let me try it.	मुझे देखने दो।
-Let me try it.	मुझे ट्राए करने दो।
-Make it quick.	जल्दी कीजिए।
-May I come in?	मैं अंदर आ सकता हूँ क्या?
-Open the door.	दरवाज़ा खोलो।
-Open the door.	दरवाज़ा खोलिए।
-Please get in.	कृपया अंदर आईए।
-Read it again.	इसे दोबारा पढ़ें।
-Read it aloud.	पढ़के सुनाओ।
-She bent down.	वह नीचे झुकी।
-Some fish fly.	कुछ मछलियाँ उड़ सकतीं हैं।
-This is a map.	यह नक्शा है।
-Tom is my son.	टॉम मेरा लड़का है।
-We're in town.	हम शहर में हैं।
-Were you shot?	क्या तुम्हें गोली लग गई थी?
-What about us?	हमारा क्या?
-Can I help you?	क्या मैं आपकी सहायता कर सकता हूँ?
-Can I help you?	क्या मैं आपकी मदद कर सकता हूँ?
-Clean the room.	कमरे को साफ़ करो।
-Don't touch it.	उसे छूना मत।
-Get out of bed!	बिस्तर से बाहर निकलो!
-Happy New Year!	नव वर्ष की शुभकामनाएं!
-Happy New Year!	नए साल की बधाईयाँ।
-Happy birthday!	जन्मदिन मुबारक हो!
-He has a beard.	उसके पास दाढ़ी है।
-He is an actor.	वह अभिनेता है।
-He needs money.	उसे पैसों की ज़रूरत है।
-He was hard up.	उसको पैसों की कमी थी।
-I like history.	मुझे इतिहास पसंद है।
-I like the dog.	मुझे यह कुत्ता अच्छा लगता है।
-I must buy one.	मुझे एक तो खरीदना ही होगा।
-I'll come back.	मैं वापस आऊँगा।
-I'll phone you.	मैं तुम्हें फ़ोन करूँगा।
-I'll stay home.	मैं घर पर ही रहूँगा।
-I'm an atheist.	मैं अनीश्वरवादी हूँ।
-I'm an atheist.	मैं भगवान में यकीन नहीं करता।
-I'm very tired.	मैं बहुत थक गया हूँ।
-It's hot today.	आज मौसम बहुत गरम है।
-It's this book.	यह किताब है।
-It's your move.	तुम्हारी चाल है।
-Only God knows.	भगवान जाने।
-Summer is over.	गर्मियाँ खतम हों चुकीं हैं।
-Take your time.	आराम से आओ।
-Think about it.	सोच लो।
-This is a book.	यह एक किताब है।
-This is a book.	यह किताब है।
-This is my bag.	यह मेरा बस्ता है।
-This is my dog.	यह मेरा कुत्ता है।
-Wash your feet.	अपने पैर धोओ।
-We study music.	हम संगीत की पढ़ाई करते हैं।
-We'll call you.	हम आपको फ़ोन करेंगे।
-We'll call you.	हम आपको बुलाएँगे।
-Where were you?	तुम कहाँ थे?
-Where were you?	आप कहाँ थे?
-You have to go.	तुम्हें जाना होगा।
-You look tired.	तुम थके-हारे से लगते हो।
-You're kidding!	मज़ाक कर रहे हो!
-A man must work.	एक आदमी के लिए काम करना ज़रूरी है।
-Are you at home?	तुम घर पे हो क्या?
-Are you guys OK?	क्या आप लोग ठीक हो?
-Come home early.	जल्दी घर आजाओ।
-Come if you can.	आ सको तो आना।
-Congratulations!	बधाई हो!
-Congratulations!	मुबारक हो!
-Did he go there?	वह वहाँ गया क्या?
-Did you miss me?	मेरी याद आई क्या?
-Don't be absurd.	पागल मत बनो।
-He came running.	वह भागते हुए आया।
+I love you.	मैं तुमसे प्यार करती हूँ।,mai tumse pyar karti hu.
+I love you.	मैं तुमसे प्यार करता हूँ।,mai tumse pyar karta hu.
+I love you.	मैं आपसे प्यार करता हूँ।,mai aapse pyar karta hu.
+I love you.	मैं आपसे प्यार करती हूँ।,mai aapse pyar karti hu.
+I love you.	मुझे तुमसे प्यार है।,mujhe tumse pyar hai.
+I will try.	मैं कोशिश करूँगा।,mai koshish karunga.
+I'm coming.	मैं आ रहा हूँ।,mai aa raha hu.
+I'm hungry!	मुझे भूख लगी है!,mujhe bhookh lagi hai!
+Let him in.	उसे अंदर भेजो।,use andar bhejo.
+Let him in.	उसे अंदर आने दो।,use andar aane do.
+Let me out!	मुझे बाहर जाने दो!,mujhe bahar jane do!
+Once again.	और एक बार।,or ek baar.
+Please sit.	बैठिए।,baithiye.
+What's new?	क्या नया है?,kya naya hai?
+What's new?	नया क्या है?,naya kya hai?
+Who's that?	वह कौन है?,vo kaun hai?
+Don't shout.	चिल्लाओ मत!,chilaao mat.
+Don't shout.	चिल्लाईए मत।,chilaiye mat.
+He stood up.	वह खड़ा हो गया।,mai khada ho gaya.
+He's strong.	वह ताकतवर है।,vo takatwar hai.
+How are you?	कैसे हो?,kaise ho?
+How are you?	आप कैसे हैं?,aap kaise hai?
+How are you?	तुम कैसे हो?,tum kaise ho?
+How are you?	तुम कैसी हो?,tum kaisi ho?
+How are you?	तू कैसा है?,tu kaisa hai?
+How are you?	तू कैसी है?,tu kaisi hai?
+How are you?	आप कैसी हैं?,aap kaise hai?
+How are you?	आप कैसे हो?,aap kaise ho?
+I like both.	मुझे दोनो पसंद हैं।,mujhe dono pasand hai.
+I like cake.	मुझे केक अच्छा लगता है।,mujhe cake accha lagta hai.
+I like dogs.	मुझे कुत्ते अच्छे लगते हैं।,mujhe kutte acche lagte hai.
+I like math.	मुझे गणित पसंद है।,mujhe ganit pasand hai.
+I'll attend.	मैं आऊंगा।,mai aaunga.
+Nobody came.	कोई नहीं आया।,koi nahi aya.
+Was I wrong?	क्या मैं ग़लत था?,kya mai galat tha?
+What's this?	यह क्या है?,ye kya hai?
+Are you sick?	क्या तुम बीमार हो?,kya tum bimaar ho?
+Bring him in.	उसको अंदर ले आओ।,usko andar le aao.
+Come with us.	हमारे साथ आओ।,hamare saath aao.
+Happy Easter!	एसटर मुबारक हो!,easter mubarak ho!
+Has Tom left?	टॉम चला गया क्या?,tom chala gaya kya?
+He is French.	वह फ़्रानसीसी है।,vo fransisi hai.
+I am at home.	मैं घर पर हूँ।,mai ghar par hu.
+I can't move.	मैं हिल नहीं सकता।,mai hil nhi sakta.
+I don't know.	मुझे नहीं पता।,mujhe nhi pata.
+I don't know.	मुझे नहीं मालूम।,mujhe nhi malum.
+I have a car.	मेरे पास एक गाड़ी है।,mere paas ek gadi hai.
+I have a dog.	मेरे पास एक कुत्ता है।,mere paas ek kutta hai.
+I understand.	मैं समझता हूँ।,mai samajhta hu.
+I'm a doctor.	मैं डॉक्टर हूँ।,mai doctor hu.
+I'm starving!	मैं भूख से मरा जा रहा हूँ।,mai bhookh se mara jaa rha hu.
+It is a book.	यह किताब है।,ye kitaab hai.
+It's snowing.	बरफ़ गिर रही है।,baraf gir rhi hai.
+It's too big.	यह बहुत ज़्यादा बड़ा है।,yeh bahut jyada bada hai.
+Please leave.	कृपया जाईये।,kripya jaaiye.
+Unbelievable!	अविश्वसनीय!,avishvasneeya!
+We are happy.	हम खुश हैं।,hum khush hai.
+What is this?	यह क्या है?,ye kya hai?
+Are you tired?	थक गए हो क्या?,thak gaye ho kya?
+Can you drive?	तुम गाड़ी चला सकते हो क्या?,tum gadi chala sakte ho kya?
+Don't get fat.	मोटे मत हो जाना।,mote mat ho jana.
+Don't give in.	हार मत मान लो।,haar mat maan lo.
+Drink it down.	पीकर खतम करदो।,peekar khatam kardo.
+Everyone dies.	मौत तो सभी की होती है।,maut toh sabhi ki hoti hai.
+Flowers bloom.	फूल खिलते हैं।,fool khilte hai.
+I am who I am.	मैं हूँ जो हूँ।,mai hu jo hu.
+I'll take him.	मैं उसे लेलूँगा।,mai use le lunga.
+I'm tired now.	मैं अब थक गया हूँ।,mai ab thak gaya hu.
+I'm very busy.	मैं बहुत व्यस्थ हूँ।,mai bahut vyast hu.
+Is that a cat?	वह बिल्ली है क्या?,vo billi hai kya?
+It's for free.	यह मुफ़्त है।,ye muft hai.
+It's for free.	यह मुफ़्त का है।,ye muft ka hai.
+Let me try it.	मुझे दिखाओ।,mujhe dikhao.
+Let me try it.	मुझे देखने दो।,mujhe dekhne do.
+Let me try it.	मुझे ट्राए करने दो।,mujhe try karne do.
+Make it quick.	जल्दी कीजिए।,jaldi kijiye.
+May I come in?	मैं अंदर आ सकता हूँ क्या?,mai andar aa sakta hu kya?
+Open the door.	दरवाज़ा खोलो।,darwaaza kholo.
+Open the door.	दरवाज़ा खोलिए।,darwaaza kholiye.
+Please get in.	कृपया अंदर आईए।,kripya andar aaiye.
+Read it again.	इसे दोबारा पढ़ें।,ise dobara padhe.
+Read it aloud.	पढ़के सुनाओ।,padke sunao.
+She bent down.	वह नीचे झुकी।,vo niche jhuki.
+Some fish fly.	कुछ मछलियाँ उड़ सकतीं हैं।,kuch macchliya ud sakti hai.
+This is a map.	यह नक्शा है।,ye naksha hai.
+Tom is my son.	टॉम मेरा लड़का है।,tom mera ladka hai.
+We're in town.	हम शहर में हैं।,ham shahar mei hai.
+Were you shot?	क्या तुम्हें गोली लग गई थी?,kya tumhe goli lag gai thi?
+What about us?	हमारा क्या?,hamara kya?
+Can I help you?	क्या मैं आपकी सहायता कर सकता हूँ?,kya mai aapki sahayta kar sakta hu?
+Can I help you?	क्या मैं आपकी मदद कर सकता हूँ?,kya mai aapki madad kar sakta hu?
+Clean the room.	कमरे को साफ़ करो।,kamre ko saaf karo.
+Don't touch it.	उसे छूना मत।,use cchuna mat.
+Get out of bed!	बिस्तर से बाहर निकलो!,bistar se bahar niklo!
+Happy New Year!	नव वर्ष की शुभकामनाएं!,nav varsh ki shubhkamnaaei!
+Happy New Year!	नए साल की बधाईयाँ।,naye saal ki badhaiyaa!
+Happy birthday!	जन्मदिन मुबारक हो!,janmadin mubarak ho!
+He has a beard.	उसके पास दाढ़ी है।,uske paas dadhi hai.
+He is an actor.	वह अभिनेता है।,vo abhineta hai.
+He needs money.	उसे पैसों की ज़रूरत है।,use paiso ki zarurat hai.
+He was hard up.	उसको पैसों की कमी थी।,usko paiso ki kami thi.
+I like history.	मुझे इतिहास पसंद है।,mujhe itihaas pasand hai.
+I like the dog.	मुझे यह कुत्ता अच्छा लगता है।,mujhe ye kutta acha lagta hai.
+I must buy one.	मुझे एक तो खरीदना ही होगा।,mujhe ek toh kharidna hi hoga.
+I'll come back.	मैं वापस आऊँगा।,mai vaapas aaunga.
+I'll phone you.	मैं तुम्हें फ़ोन करूँगा।,mai tumhe phone karunga.
+I'll stay home.	मैं घर पर ही रहूँगा।,mai ghar par hi rahunga.
+I'm an atheist.	मैं अनीश्वरवादी हूँ।,mai anishwarvadi hu.
+I'm an atheist.	मैं भगवान में यकीन नहीं करता।,mai bhagwan mei yakin nhi karta.
+I'm very tired.	मैं बहुत थक गया हूँ।,mai bahut thak gaya hu.
+It's hot today.	आज मौसम बहुत गरम है।,aaj mausam bahut garam hai.
+It's this book.	यह किताब है।,ye kitab hai.
+It's your move.	तुम्हारी चाल है।,tumari chaal hai.
+Only God knows.	भगवान जाने।,bhagwan jaane.
+Summer is over.	गर्मियाँ खतम हों चुकीं हैं।,garmiya khatam ho chuki hai.
+Take your time.	आराम से आओ।,aaraam se aao.
+Think about it.	सोच लो।,soch lo.
+This is a book.	यह एक किताब है।,ye ek kitab hai.
+This is a book.	यह किताब है।,ye kitab hai.
+This is my bag.	यह मेरा बस्ता है।,ye mera basta hai.
+This is my dog.	यह मेरा कुत्ता है।,ye mera kutta hai.
+Wash your feet.	अपने पैर धोओ।,apne paer dho.
+We study music.	हम संगीत की पढ़ाई करते हैं।,ham sangeet ki padhai karte hai.
+We'll call you.	हम आपको फ़ोन करेंगे।,ham apko phone karenge.
+We'll call you.	हम आपको बुलाएँगे।,ham apko bulaenge.
+Where were you?	तुम कहाँ थे?,tum kaha the?
+Where were you?	आप कहाँ थे?,aap kaha the?
+You have to go.	तुम्हें जाना होगा।,tumhe jana hoga.
+You look tired.	तुम थके-हारे से लगते हो।,tum thake hare se lagte ho.
+You're kidding!	मज़ाक कर रहे हो!,mazaak kar rahe ho!
+A man must work.	एक आदमी के लिए काम करना ज़रूरी है।,ek aadmi ke liye kaam karna jaruri hai.
+Are you at home?	तुम घर पे हो क्या?,tum ghar pe ho kya?
+Are you guys OK?	क्या आप लोग ठीक हो?,kya aap log theek ho?
+Come home early.	जल्दी घर आजाओ।,jaldi ghar aa jao.
+Come if you can.	आ सको तो आना।,aa sako toh aana.
+Congratulations!	बधाई हो!,badhai ho!
+Congratulations!	मुबारक हो!,mubarak ho!
+Did he go there?	वह वहाँ गया क्या?,vo vaha gaya kya?
+Did you miss me?	मेरी याद आई क्या?,meri yaad aai kya?
+Don't be absurd.	पागल मत बनो।,pagal mat bano.
+He came running.	वह भागते हुए आया।,vo bhagte hue aaya.
 He can't be ill.	वह बीमार नहीं हो सकता।
 He has a hat on.	उसने टोपी पहनी हुई है।
 He reads Arabic.	वह अरबी पढ़ सकता है।
