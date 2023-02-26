@@ -29,14 +29,14 @@ def import_data(file, path = ''):
     
     """
     
-    timestamp_str_1 = r'\d\d/\d\d/\d\d, \d\d:\d\d'
-    timestamp_str_2 = r'\d\d/\d\d/\d\d\d\d, \d\d?:\d\d? [ap]m'
-    timestamp_str_3 = r'\d\d/\d\d/\d\d, \d\d?:\d\d? [ap]m' # 05/10/22, 5:01 pm AND 05/10/22, 11:01 pm
-
+    timestamp_str_1 = r'\d\d/\d\d/\d\d,\s\d\d:\d\d'
+    timestamp_str_2 = r'\d\d/\d\d/\d\d\d\d,\s\d\d?:\d\d?\s[ap]m'
+    timestamp_str_3 = r'\d\d/\d\d/\d\d,\s\d\d?:\d\d?\s[ap]m' # 05/10/22, 5:01 pm ; 05/10/22, 11:01 pm ; 20/01/23, 4:37 pm
+    
     timestamp_pattern_1 = re.compile(timestamp_str_1)
     timestamp_pattern_2 = re.compile(timestamp_str_2)
     timestamp_pattern_3 = re.compile(timestamp_str_3)
-
+    
     phn_num_pattern = re.compile(r'[+]\d+ \d{5} \d{5}')
     #with open(path + file, encoding = 'utf-8') as outfile: # Original # Error: encoding is not a valid argument.
     with io.open(os.path.join(path, file), encoding = 'utf-8') as outfile:
@@ -48,16 +48,24 @@ def import_data(file, path = ''):
         messages = []
 
         for message in raw_text: 
-            # print("message: " + message)
+            #print("message: " + message)
 
             x1 = re.findall("^" + timestamp_str_1, message)
             x2 = re.findall("^" + timestamp_str_2, message)
             x3 = re.findall("^" + timestamp_str_3, message)
-            # print(x1)
-            # print(x2)
+    
+#             print(message)
+#             print(x1)
+#             print(x2)
+#             print(x3)
+            
+            
             if (x1 or x2 or x3) and ":" not in message.split(" - ")[1]:
-                # 31/01/19, 19:13 - Messages to this group are now secured with end-to-end encryption. Tap for more info.
-                if "Messages to this group are now secured with end-to-end encryption. Tap for more info." in message.split(" - ")[1]:
+# 31/01/2019, 19:13 - Messages to this group are now secured with end-to-end encryption. Tap for more info.
+# 26/02/2023, 20:40 - "Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more."
+                if "Messages and calls are end-to-end encrypted." in message.split(" - ")[1]:
+                
+                
                     continue
 
                 elif "left" in message.split(" - ")[1]:
@@ -80,6 +88,7 @@ def import_data(file, path = ''):
                 # You changed this group's icon
                 elif "changed this group's icon" in message.split(" - ")[1]: 
                     continue
+                    
 
             if len(message) > 15 and (re.search(timestamp_pattern_1, message[0:15]) \
                                       or re.search(timestamp_pattern_2, message[0:20]) \
@@ -95,12 +104,17 @@ def import_data(file, path = ''):
                  
                 
                 users.append( message.split(' - ')[1].split(':')[0] )
+                
                 messages.append( ''.join( message.split(' - ')[1].split(':')[1:] ) )
             else:
                 # print(x1)
                 # print(x2)
-                # print("Exception in message: " + message)
-                messages[-1] = messages[-1] + "\n" + message
+                try:
+                    messages[-1] = messages[-1] + "\n" + message
+                except:
+                    print(len(messages))
+                    print("Exception in message: " + message)
+                
                 continue
 
     # Convert dictionary to dataframe
