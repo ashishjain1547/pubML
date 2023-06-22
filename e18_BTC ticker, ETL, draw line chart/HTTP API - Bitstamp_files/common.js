@@ -1,0 +1,5 @@
+jQuery(document).ajaxSend(function(event,xhr,settings){function getCookie(name){var cookieValue=null,cookies=[],i=0,j=0,cookie={};if(document.cookie&&document.cookie!==''){cookies=document.cookie.split(';');for(j=cookies.length;i<j;i+=1){cookie=jQuery.trim(cookies[i]);if(cookie.substring(0,name.length+1)===(name+'=')){cookieValue=decodeURIComponent(cookie.substring(name.length+1));break;}}}
+return cookieValue;}
+function sameOrigin(url){var host=document.location.host,protocol=document.location.protocol,sr_origin='//'+host,origin=protocol+sr_origin;return(url===origin||url.slice(0,origin.length+1)===origin+'/')||(url===sr_origin||url.slice(0,sr_origin.length+1)===sr_origin+'/')||!(/^(\/\/|http:|https:).*/.test(url));}
+function safeMethod(method){return(/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));}
+if(!safeMethod(settings.type)&&sameOrigin(settings.url)){xhr.setRequestHeader("X-CSRFToken",getCookie('csrftoken'));}});

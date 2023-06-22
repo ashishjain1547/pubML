@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin-ext');
+body {font-family:'Open Sans', sans-serif;background-color:rgba(240,240,235,1);}
+
+#header table {border-collapse:collapse;border-spacing:0;}
+#header th, td {text-align:left;font-weight:normal;vertical-align:baseline;}
+#header strong{font-weight:bold;}
+#header ol, #header ul {list-style:none;}
+#header h3 {font-size:13px;}
+
+#header {font-size:13px;line-height:48px;color:rgba(100,175,255,1);position:fixed;top:0;left:0;z-index:15;width:100%;background-color:rgba(240,240,235,1)}
+#header .active-background {background-color:rgba(40,40,40,1);}
+#header #header-top {position:relative;}
+#header #header-top h1 {padding:24px 0 24px 52px;transition:.4s all;}
+#header #header-top h1 a {background:url(/s/images/Bitstamp_XS_cropped.png) left top no-repeat;background-size:100%;display:block;text-indent:-999999px;height:20px;width:90px;}
+#header.collapse #header-top h1 {padding:16px 0 16px 52px;}
+#header.collapse #header-top ol li {padding:20px 24px 12px 0;}
+#header #header-top ol {position:absolute;top:0;right:28px;letter-spacing:-4px;visibility:visible;opacity:1;max-height:100px;}
+#header #header-top ol li {height:20px;display:inline-block;letter-spacing:normal;word-spacing:normal;line-height:1;padding:28px 24px 20px 0;transition:.4s all;}
+#header #header-top ol li a {display:block;line-height:1;font-size:13px;color:rgba(20,20,20,1);text-decoration:none;vertical-align:middle;}
+#header #header-top ol li a:hover {text-decoration:underline;}
+#header #header-top ol li:last-child {}
+#header #header-top ol li:last-child a {padding:0 0 0 24px;border-left:1px solid rgba(20,20,20,1);color:rgba(100,175,255,1);}
+#header #header-top ol li:last-child a:hover {}
+
+#header #header-top-mobile {display:none;position:relative;}
+#header #header-top-mobile h1 {padding:24px 0 24px 24px;transition:.4s all;width:100px;}
+#header #header-top-mobile h1 a {background:url(/s/images/Bitstamp_XS_cropped.png) no-repeat;display:block;text-indent:-999999px;height:20px;}
+#header #header-top-mobile .container {z-index:2;position:absolute;left:104vw;top:0;background-color:rgba(20,20,20,1);width:90vw;height:90vh;-webkit-box-shadow:-4px 4px 6px rgba(0,0,0,0.2);-moz-box-shadow:-4px 4px 6px rgba(0,0,0,0.2);box-shadow:-4px 4px 6px rgba(0,0,0,0.2);overflow-y: scroll;}
+#header #header-top-mobile .container .mobile-list {padding:0 0 20px 20px;}
+#header #header-top-mobile .container .mobile-list .details {display:none;transition:.4s all;height:30px;}
+#header #header-top-mobile .container .mobile-list .details span {display:block;margin:0 0 20px 30px;color:rgba(140,140,140,1);}
+#header #header-top-mobile .container .mobile-list .details strong {color:rgba(255,255,255,1);}
+#header #header-top-mobile .container .mobile-list .details.visible {display:inline-block;width:100%;}
+#header #header-top-mobile .container .mobile-list .details-parent ol {padding:0;}
+#header #header-top-mobile .container .mobile-list .details-parent ol li {padding:0;border:none;}
+#header #header-top-mobile .container .mobile-list .details-parent ol li:first-child {padding:0;border-top:1px solid rgba(56,56,56,1);}
+#header #header-top-mobile .fa-angle-down {position:absolute;right:20px;}
+#header #header-top-mobile .fa-angle-up {position:absolute;right:20px;}
+#header #header-top-mobile img {position:absolute;top:22px;right:20px;transition:.4s all;}
+#header #header-top-mobile ol {padding:20px;}
+#header #header-top-mobile ol li {border-top:1px solid rgba(56,56,56,1);height:10px;display:block;letter-spacing:normal;word-spacing:normal;line-height:1;padding:20px 0;}
+#header #header-top-mobile ol li:first-child {border-top:none;text-transform:uppercase;}
+#header #header-top-mobile ol li a {display:block;line-height:1;font-size:13px;color:rgba(255,255,255,1);text-decoration:none;vertical-align:middle;cursor:pointer;}
+#header #header-top-mobile ol li a.blue {color:rgba(100,175,255,1);}
+#header #header-top-mobile ol li a.red {color:rgba(180,80,80,1);}
+#header.collapse #header-top-mobile h1 {padding:6px 0 6px 24px;}
+#header.collapse #header-top-mobile img {position:absolute;top:6px;right:20px;}
+
+#header #header-control {background-color:rgba(20,20,20,1);height:48px;position:relative;}
+#header #control {position:absolute;top:0;left:28px;padding:0 24px 0 24px;z-index:1;}
+#header #control h3 {display:inline-block;color:rgba(100,175,255,1);cursor:pointer;}
+#header #control h3 .fa {margin-left:3px;}
+
+#header #control #currency-pairs-dropdown {position:absolute;top:48px;left:0;background-color:rgba(40,40,40,1);width:1178px;padding:24px;border-radius:0 0 6px 6px;display:none;z-index:1;}
+#header #control #currency-pairs-dropdown .currency-group {width:176px;display:inline-block;vertical-align:top;}
+#header #control #currency-pairs-dropdown .currency-group:not(:last-child) {margin:0 21px 0 0;}
+#header #control #currency-pairs-dropdown .currency-group ul li {line-height:30px;color:rgba(140,140,140,1);position:relative;}
+#header #control #currency-pairs-dropdown .currency-group ul li:not(.group-title):hover {cursor:pointer;text-decoration:underline rgba(100,175,255,1);}
+#header #control #currency-pairs-dropdown .currency-group ul li:not(:last-child) {border-bottom:1px solid rgba(60,60,60,1);}
+#header #control #currency-pairs-dropdown .currency-group ul li.group-title {font-size:11px;line-height:25px;color:rgba(120,120,120,1);}
+#header #control #currency-pairs-dropdown .currency-group ul li span.group-pair {color:rgba(100,175,255,1);}
+#header #control #currency-pairs-dropdown .currency-group ul li span.group-price {position:absolute;left:76px;}
+#header #control #currency-pairs-dropdown .currency-group ul li.selected-item span.group-pair {font-weight:600;color:rgba(255,255,255,1);}
+
+#header #control ol li {}
+#header #control #last-price {color:rgba(140,140,140,1);margin: 0 0 0 10px;display:inline-block;}
+#header #control #last-price strong {color:rgba(255,255,255,1);display:inline-block;}
+#header #balances {margin:0 auto;text-align:center;}
+#header #balances ol {}
+#header #balances ol li {display:inline-block;margin:0 3px 0 0;}
+#header #balances ol li:last-child {margin:0;}
+#header #balances ol li.title {color:rgba(140,140,140,1)}
+#header #balances ol li.separator {color:rgba(80,80,80,1);margin:0 3px 0 0;}
+#header #balances ol li span {display:inline-block;color:rgba(200,200,200,1);}
+#header #balances ol li span strong {color:rgba(255,255,255,1)}
+#header #balances ol li .title {color:rgba(140,140,140,1);margin:0 3px 0 0;}
+#header #balances ol li .dot {margin:0 3px 0 3px;}
+#header #account-control {position:absolute;text-align:right;top:0;right:28px;letter-spacing:-4px;}
+#header #account-control h3 .fa {display:inline-block;margin:0 0 0 2px;}
+#header #account-control #subaccount {letter-spacing:normal;word-spacing:normal;display:inline-block;padding:0 24px;z-index:1;}
+#header #account-control #subaccount h3 {color:rgba(100,175,255,1);cursor:pointer;}
+#header #account-control #subaccount #subaccount-dropdown {position:absolute;top:48px;background-color:rgba(40,40,40,1);width:200px;padding:0 24px 24px 24px;border-radius:0 0 6px 6px;display:none;z-index:1001;}
+#header #account-control #subaccount #subaccount-dropdown table {color:rgba(255,255,255,1);width:100%;margin:25px 0 0 0;}
+#header #account-control #subaccount #subaccount-dropdown table thead {}
+#header #account-control #subaccount #subaccount-dropdown table thead tr {}
+#header #account-control #subaccount #subaccount-dropdown table thead tr th {font-size:11px;color:rgba(80,80,80,1);line-height:25px;}
+#header #account-control #subaccount #subaccount-dropdown table thead tr th:nth-child(even) {text-align:right;}
+#header #account-control #subaccount #subaccount-dropdown table tbody {}
+#header #account-control #subaccount #subaccount-dropdown table tbody tr {}
+#header #account-control #subaccount #subaccount-dropdown table tbody tr td {border-top:1px solid rgba(60,60,60,1);line-height:32px;color:rgba(100,175,255,1);}
+#header #account-control #subaccount #subaccount-dropdown table tbody tr td:hover {cursor:pointer;text-decoration:underline rgba(255,255,255,1);}
+#header #account-control #subaccount #subaccount-dropdown table tbody tr td .dot {margin:0 2px 0 2px;}
+#header #account-control #subaccount #subaccount-dropdown table tbody tr td.selected-item {font-weight:bold;color:rgba(255,255,255,1);cursor:default;}
+#header #account-control #subaccount #subaccount-dropdown table tbody tr td.selected-item:hover {text-decoration:none;}
+
+#header #header-top-mobile .container .mobile-list #select-subaccount-mobile {}
+#header #header-top-mobile .container .mobile-list #select-subaccount-mobile span {}
+#header #header-top-mobile .container .mobile-list #select-subaccount-mobile span:hover {cursor:pointer;text-decoration:underline rgba(255,255,255,1);}
+#header #header-top-mobile .container .mobile-list #select-subaccount-mobile span.selected-item {font-weight:bold;color:rgba(255,255,255,1);cursor:default;}
+#header #header-top-mobile .container .mobile-list #select-subaccount-mobile span.selected-item:hover {text-decoration:none;}
+
+#header #account-control #account {letter-spacing:normal;word-spacing:normal;display:inline-block;text-align:right;z-index:1;}
+#header #account-control #account h3 {padding:0 24px;cursor:pointer;}
+#header #account-control #account #login-button {position:absolute;top:0;right:24px;}
+#header #account-control #account #login-button-mobile {display:none;position:absolute;top:-38px;left:0px;}
+#header #account-control #account #login-button a {color:rgba(100,175,255,1);white-space:nowrap;text-decoration:none;}
+#header #account-control #account #login-button a:hover {text-decoration:underline;}
+#header #account-control #account #register-button {position:absolute;top:0;right:106px;}
+#header #account-control #account #register-button a {color:rgba(100,175,255,1);white-space:nowrap;text-decoration:none;}
+#header #account-control #account #register-button a:hover {text-decoration:underline;}
+#header #account-control #account #account-dropdown {position:absolute;top:48px;right:0;background-color:rgba(40,40,40,1);width:530px;padding:15px 24px 24px 24px;border-radius:0 0 6px 6px;display:none;z-index:1;}
+#header #account-control #account #account-dropdown a:hover {cursor:pointer;}
+#header #account-control #account #account-dropdown table {color:rgba(255,255,255,1);width:100%;}
+#header #account-control #account #account-dropdown > table {margin:0 0 15px 0;}
+#header #account-control #account #account-dropdown table thead {}
+#header #account-control #account #account-dropdown table thead tr {}
+#header #account-control #account #account-dropdown table thead tr th {font-size:11px;color:rgba(80,80,80,1);line-height:24px;}
+#header #account-control #account #account-dropdown table thead tr th:nth-child(even) {text-align:right;}
+#header #account-control #account #account-dropdown table tbody {}
+#header #account-control #account #account-dropdown table tbody tr {}
+#header #account-control #account #account-dropdown table tbody tr #logout {color:rgba(180,80,80,1);}
+#header #account-control #account #account-dropdown table tbody tr #logout:hover {text-decoration:underline rgba(180,80,80,1);}
+#header #account-control #account #account-dropdown table tbody tr #view-account {color:rgba(100,175,255,1);}
+#header #account-control #account #account-dropdown table tbody tr #view-account:hover {text-decoration:underline rgba(100,175,255,1);}
+#header #account-control #account #account-dropdown table tbody tr td {padding:5px 0 0 0;line-height:24px;color:rgba(140, 140, 140, 1);border-top:1px solid rgba(60,60,60,1);white-space:nowrap;}
+#header #account-control #account #account-dropdown table tbody tr td span {color:rgba(255,255,255, 1);}
+#header #account-control #account #account-dropdown table tbody tr .currency-row {border:none;padding:0;}
+#header #account-control #account #account-dropdown table tbody tr .currency-row-last {border:none;padding:0 0 5px 0;}
+#header #account-control #account #account-dropdown table tbody tr .subaccount-name {vertical-align:top;}
+#header #account-control #account #account-dropdown table tbody tr .subaccount-name span {color:rgba(140,140,140,1);line-height:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;display:inline-block;}
+#header #account-control #account #account-dropdown #combined-balance {color:rgba(100,175,255,1);}
+#header #account-control #account #account-dropdown #sub-account-overview {max-height:400px;position:relative;overflow:hidden;}
+
+@media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ),
+		only screen and (    min--moz-device-pixel-ratio: 1.3 ),
+		only screen and (      -o-min-device-pixel-ratio: 2.6/2 ), /* returns 1.3, see Dev.Opera */
+		only screen and (         min-device-pixel-ratio: 1.3 ),
+		only screen and ( min-resolution: 124.8dpi ),
+		only screen and ( min-resolution: 1.3dppx ) {
+	#header #header-top h1 a {background:url(/s/images/Bitstamp_180x40_cropped.png) left top no-repeat;background-size: 90px 20px;}
+	#header #header-top-mobile h1 a {background:url(/s/images/Bitstamp_180x40_cropped.png) left top no-repeat;background-size: 90px 20px;}
+}
+
+@media (max-width: 1200px) {
+	#header #account-control {display:none;}
+	#header #menu-mobile {display:block;}
+	#header h1 {padding:12px 0;}
+	#header h1 a {background-position:center;}
+	#header #control {position:relative;top:0;left:0;margin:0 auto;padding:0;z-index:1;}
+	#header #control #select-currency {text-align:center;}
+	#header #control #currency-pairs-dropdown {width:272px;}
+	#header #header-top {display:none;}
+	#header #header-top-mobile {display:block;}
+	#header #balances {display:none;}
+}

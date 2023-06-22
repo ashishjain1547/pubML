@@ -1,0 +1,3671 @@
+<!DOCTYPE html>
+<html lang="en"><!-- POMEMBNO! tu mora biti pravilna koda jezika --><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		
+		<meta charset="utf-8">
+		<title>HTTP API - Bitstamp</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="description" content="European based bitcoin exchange">
+		<meta name="keywords" content="bitcoin">
+		<link rel="stylesheet" href="HTTP%20API%20-%20Bitstamp_files/main.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="HTTP%20API%20-%20Bitstamp_files/header-compatible.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="HTTP%20API%20-%20Bitstamp_files/perfect-scrollbar.css" type="text/css">
+		<link rel="stylesheet" href="HTTP%20API%20-%20Bitstamp_files/main_responsive.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="HTTP%20API%20-%20Bitstamp_files/font-awesome.css" type="text/css">
+		<link rel="stylesheet" href="HTTP%20API%20-%20Bitstamp_files/footer.css" type="text/css">
+		<link rel="alternate" href="https://www.bitstamp.net/news/feed/" type="application/rss+xml" title="Bitstamp News">
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="shortcut icon" href="https://www.bitstamp.net/s/icons/favicon.ico?v=1515166303">
+		<link href="HTTP%20API%20-%20Bitstamp_files/css.css" rel="stylesheet" type="text/css">
+		<link href="HTTP%20API%20-%20Bitstamp_files/css_002.css" rel="stylesheet" type="text/css">
+		<link href="HTTP%20API%20-%20Bitstamp_files/css_003.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" async="" src="HTTP%20API%20-%20Bitstamp_files/ga.js"></script><script>var STX_namespaced=true;</script>
+		
+	</head>
+	<body data-pusher="0ea60078504a5d9773ab" data-pair="btcusd" data-base-currency="BTC" data-counter-currency="USD" data-decimal-base="8" data-decimal-counter="2" data-homechart-endpoint="/homechart-data/" data-authenticated="False">
+		<div class="responsive_test"></div>
+		<div id="header" class="">
+	<div id="header-top">
+		<h1><a href="https://www.bitstamp.net/">Bitstamp</a></h1>
+		<ol>
+			<li><a href="https://www.bitstamp.net/">Home</a></li>
+			<li><a href="https://www.bitstamp.net/account/balance/">Account</a></li>
+			<li><a href="https://www.bitstamp.net/market/order/instant/">Buy / Sell</a></li>
+			<li><a href="https://www.bitstamp.net/account/deposit/">Deposit</a></li>
+			<li><a href="https://www.bitstamp.net/account/withdraw/">Withdrawal</a></li>
+			<li><a href="https://www.bitstamp.net/market/tradeview/">Tradeview</a></li>
+		</ol>
+	</div>
+	<div id="header-top-mobile">
+		<h1><a href="https://www.bitstamp.net/">Bitstamp</a></h1>
+		<img src="HTTP%20API%20-%20Bitstamp_files/mobile_menu.png" alt="">
+		<div class="container">
+			<ol class="mobile-list">
+				<li><a class="blue back"><span class="fa fa-chevron-left"></span> Back</a></li>
+				<li><a href="https://www.bitstamp.net/account/register/" class="blue">Register</a></li>
+				<li><a href="https://www.bitstamp.net/account/login/" class="blue">Log In</a></li>
+				<li><a href="https://www.bitstamp.net/">Home</a></li>
+				<li><a href="https://www.bitstamp.net/account/balance/">Account</a></li>
+				<li><a href="https://www.bitstamp.net/market/order/instant/">Buy / Sell</a></li>
+				<li><a href="https://www.bitstamp.net/account/deposit/">Deposit</a></li>
+				<li><a href="https://www.bitstamp.net/account/withdraw/">Withdrawal</a></li>
+				<li><a href="https://www.bitstamp.net/market/tradeview/">Tradeview</a></li>
+			</ol>
+		</div>
+	</div>
+	<div id="header-control" data-pair="BTC/USD">
+		<div id="control">
+			<div id="select-currency">
+				<h3>BTC / USD<span class="fa fa-angle-down"></span></h3>
+				<h3 id="last-price" data-pair="btcusd" data-counter-currency="USD" data-decimal-counter="2">USD <strong>13114.96</strong></h3>
+			</div>
+			<div id="currency-pairs-dropdown" data-url="/account/trade-pair/set/">
+				<div class="currency-group">
+					<ul>
+						<li class="group-title">Bitcoin BTC</li>
+						<li data-setter="BTC/USD" class="selected-item"><span class="group-pair">BTC / USD</span><span class="group-price">USD 13114.96</span></li>
+						<li data-setter="BTC/EUR"><span class="group-pair">BTC / EUR</span><span class="group-price">EUR 11000.22</span></li>
+					</ul>
+				</div>
+				<div class="currency-group">
+					<ul>
+						<li class="group-title">Euro</li>
+						<li data-setter="EUR/USD"><span class="group-pair">EUR / USD</span><span class="group-price">USD 1.19368</span></li>
+					</ul>
+				</div>
+				<div class="currency-group">
+					<ul>
+						<li class="group-title">Ripple XRP</li>
+						<li data-setter="XRP/USD"><span class="group-pair">XRP / USD</span><span class="group-price">USD 1.57000</span></li>
+						<li data-setter="XRP/EUR"><span class="group-pair">XRP / EUR</span><span class="group-price">EUR 1.31502</span></li>
+						<li data-setter="XRP/BTC"><span class="group-pair">XRP / BTC</span><span class="group-price">BTC 0.00012010</span></li>
+					</ul>
+				</div>
+				<div class="currency-group">
+					<ul>
+						<li class="group-title">Litecoin</li>
+						<li data-setter="LTC/USD"><span class="group-pair">LTC / USD</span><span class="group-price">USD 224.57</span></li>
+						<li data-setter="LTC/EUR"><span class="group-pair">LTC / EUR</span><span class="group-price">EUR 185.57</span></li>
+						<li data-setter="LTC/BTC"><span class="group-pair">LTC / BTC</span><span class="group-price">BTC 0.01700480</span></li>
+					</ul>
+				</div>
+				<div class="currency-group">
+					<ul>
+						<li class="group-title">Ethereum</li>
+						<li data-setter="ETH/USD"><span class="group-pair">ETH / USD</span><span class="group-price">USD 1164.92</span></li>
+						<li data-setter="ETH/EUR"><span class="group-pair">ETH / EUR</span><span class="group-price">EUR 968.81</span></li>
+						<li data-setter="ETH/BTC"><span class="group-pair">ETH / BTC</span><span class="group-price">BTC 0.08872495</span></li>
+					</ul>
+				</div>
+				<div class="currency-group">
+					<ul>
+						<li class="group-title">Bitcoin Cash BCH</li>
+						<li data-setter="BCH/USD"><span class="group-pair">BCH / USD</span><span class="group-price">USD 2388.00</span></li>
+						<li data-setter="BCH/EUR"><span class="group-pair">BCH / EUR</span><span class="group-price">EUR 2005.00</span></li>
+						<li data-setter="BCH/BTC"><span class="group-pair">BCH / BTC</span><span class="group-price">BTC 0.18149265</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="balances">
+		</div>
+		<div id="account-control">
+			<div id="subaccount">
+			</div>
+			<div id="account">
+				<div id="register-button">
+					<a href="https://www.bitstamp.net/account/register/">Register</a>
+				</div>
+				<div id="login-button">
+					<a href="https://www.bitstamp.net/account/login/">Log In</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div id="content-wrapper">
+<div class="cell">
+	<div class="container">
+		<div class="main_content clearfix">
+			<div class="menu">
+<ul class="default_menu">
+	<li>
+		<a href="https://www.bitstamp.net/" id="template_text" class="template_toogle_class">Overview<span>&nbsp;</span></a>
+	</li>
+	<li>
+		<a href="https://www.bitstamp.net/market/order_book/" id="template_text" class="template_toogle_class">Order Book<span>&nbsp;</span></a>
+	</li>
+	<li class="active second_level">
+		<a href="https://www.bitstamp.net/api/" id="template_text" class="template_toogle_class">API<span>&nbsp;</span></a>
+		<ul class="clearfix">
+			<li class="active"><a href="https://www.bitstamp.net/api/"><span>&nbsp;</span>HTTP API</a></li>
+			<li><a href="https://www.bitstamp.net/websocket/"><span>&nbsp;</span>Websocket API</a></li>
+			<li><a href="https://www.bitstamp.net/fix/" id="template_text" class="template_toggle_class">FIX<span>&nbsp;</span></a></li>
+		</ul>
+	</li>
+
+</ul>
+</div>
+			
+<div id="api-docs" class="content">
+	<header class="clearfix">
+		<h1>API</h1>
+	</header>
+	<h2>What Is API?</h2>
+	<p>Bitstamp application programming interface (API) allows our clients 
+to access and control their accounts, using custom written software.</p>
+	<p>With the inclusion of the new BTC/EUR currency pair, we've added new
+ endpoints for some API calls (info about specific calls below). <strong>The old endpoints are still available and have not changed.</strong>
+ We strongly suggest however, that you refer to the v2 API for future 
+references. Please note that API v2 endpoints rounding is different, 
+than the one used on the old endpoints.</p>
+	<h2>Request limits</h2>
+	<p>Do not make more than 600 requests per 10 minutes or we will ban your IP address. For real time data please refer to the <a href="https://www.bitstamp.net/websocket/">websocket API</a>.</p>
+	<h2>Public Data Functions</h2>
+
+	<h4 id="ticker">Ticker</h4>
+	<p>Passing any GET parameters, will result in your request being rejected.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/ticker/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns data for the BTC/USD currency pair.</td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/ticker/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>last</strong></td>
+				<td><span class="emphasized">Last BTC price.</span></td>
+			</tr>
+			<tr>
+				<td><strong>high</strong></td>
+				<td><span class="emphasized">Last 24 hours price high.</span></td>
+			</tr>
+			<tr>
+				<td><strong>low</strong></td>
+				<td><span class="emphasized">Last 24 hours price low.</span></td>
+			</tr>
+			<tr>
+				<td><strong>vwap</strong></td>
+				<td><span class="emphasized">Last 24 hours <a class="font-green" href="http://en.wikipedia.org/wiki/Volume-weighted_average_price" target="_blank">volume weighted average price</a>.</span></td>
+			</tr>
+			<tr>
+				<td><strong>volume</strong></td>
+				<td><span class="emphasized">Last 24 hours volume.</span></td>
+			</tr>
+			<tr>
+				<td><strong>bid</strong></td>
+				<td><span class="emphasized">Highest buy order.</span></td>
+			</tr>
+			<tr>
+				<td><strong>ask</strong></td>
+				<td><span class="emphasized">Lowest sell order.</span></td>
+			</tr>
+			<tr>
+				<td><strong>timestamp</strong></td>
+				<td><span class="emphasized">Unix timestamp date and time.</span></td>
+			</tr>
+			<tr>
+				<td><strong>open</strong></td>
+				<td><span class="emphasized">First price of the day.</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="ticker-hour">Hourly ticker</h4>
+	<p>Passing any GET parameters, will result in your request being rejected.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/ticker_hour/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns data for the BTC/USD currency pair.</td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/ticker_hour/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Returns a JSON dictionary like the ticker call, with the calculated values being from within an hour.</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="order-book">Order book</h4>
+	<p>Passing any GET parameters, will result in your request being rejected.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/order_book/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns data for the BTC/USD currency pair.</td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/order_book/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Returns a JSON dictionary like the ticker call, with the calculated values being from within an hour.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Returns a JSON dictionary 
+with "bids" and "asks". Each is a list of open orders and each order is 
+represented as a list holding the price and the amount.</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="transactions">Transactions</h4>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/transactions/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns data for the BTC/USD currency pair.</td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/transactions/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>time</strong> (Optional)</td>
+				<td>
+					<span class="emphasized">The time interval from which we want the transactions to be returned. Possible values are <strong>minute</strong>, <strong>hour</strong> (default) or <strong>day</strong>.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong> - descending list of transactions. Every transaction dictionary contains:</td>
+			</tr>
+			<tr>
+				<td><strong>date</strong></td>
+				<td><span class="emphasized">Unix timestamp date and time.</span></td>
+			</tr>
+			<tr>
+				<td><strong>tid</strong></td>
+				<td><span class="emphasized">Transaction ID.</span></td>
+			</tr>
+			<tr>
+				<td><strong>price</strong></td>
+				<td><span class="emphasized">BTC price.</span></td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">BTC amount.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td><span class="emphasized">0 (buy) or 1 (sell).</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="trading-pairs-info">Trading pairs info</h4>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/trading-pairs-info/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong> - list of trading pairs. Every trading pair dictionary contains:</td>
+			</tr>
+			<tr>
+				<td><strong>name</strong></td>
+				<td><span class="emphasized">Trading pair.</span></td>
+			</tr>
+			<tr>
+				<td><strong>url_symbol</strong></td>
+				<td><span class="emphasized">URL symbol of trading pair.</span></td>
+			</tr>
+			<tr>
+				<td><strong>base_decimals</strong></td>
+				<td><span class="emphasized">Decimal precision for base currency (BTC/USD - base: BTC).</span></td>
+			</tr>
+			<tr>
+				<td><strong>counter_decimals</strong></td>
+				<td><span class="emphasized">Decimal precision for counter currency (BTC/USD - counter: USD).</span></td>
+			</tr>
+			<tr>
+				<td><strong>minimum_order</strong></td>
+				<td><span class="emphasized">Minimum order size.</span></td>
+			</tr>
+			<tr>
+				<td><strong>trading</strong></td>
+				<td><span class="emphasized">Trading engine status (Enabled/Disabled).</span></td>
+			</tr>
+			<tr>
+				<td><strong>description</strong></td>
+				<td><span class="emphasized">Trading pair description.</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="conversion-rate">EUR/USD conversion rate</h4>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/eur_usd/</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>buy</strong></td>
+				<td><span class="emphasized">Buy conversion rate.</span></td>
+			</tr>
+			<tr>
+				<td><strong>sell</strong></td>
+				<td><span class="emphasized">Sell conversion rate.</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h1>API authentication</h1>
+	<p>All private API calls require authentication. For a successful authentication you need to provide <strong>your API key</strong>, a <strong>signature</strong> and a <strong>nonce</strong> parameter.</p>
+	<h4>API key</h4>
+	<p>To get an API key, go to "Account", "Security" and then "API Access". Set permissions and click "Generate key".</p>
+	<h4>Nonce</h4>
+	<p>Nonce is a regular integer number. It must be increased with every request you make. Read more about it <a href="http://en.wikipedia.org/wiki/Cryptographic_nonce" target="_blank">here</a>.
+ Example: if you set nonce to 1 in your first request, you must set it 
+to at least 2 in your second request. You are not required to start with
+ 1. A common practice is to use <a href="http://en.wikipedia.org/wiki/Unix_time" target="_blank">unix time</a> for that parameter.</p>
+	<h4>Signature</h4>
+	<p>Signature is a HMAC-SHA256 encoded message containing nonce, customer ID (can be found <a href="https://www.bitstamp.net/account/balance/" target="_blank">here</a>)
+ and API key. The HMAC-SHA256 code must be generated using a secret key 
+that was generated with your API key. This code must be converted to 
+it's hexadecimal representation (64 uppercase characters).</p>
+	<p>A short code example on how to generate a signature can be seen here:</p>
+	<table class="table code-example">
+		<thead>
+			<tr><th>Python <span class="fa fa-code"></span></th>
+		</tr></thead>
+		<tbody>
+			<tr>
+				<td>import hmac<br>import hashlib<br><br>message = nonce + customer_id + api_key<br>signature = hmac.new(<br>&nbsp;&nbsp;&nbsp;&nbsp;API_SECRET,<br>&nbsp;&nbsp;&nbsp;&nbsp;msg=message,<br>&nbsp;&nbsp;&nbsp;&nbsp;digestmod=hashlib.sha256<br>).hexdigest().upper()</td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-code-example" id="authentication-errors"><span class="fa fa-arrow-circle-o-down"></span>Authentication errors</p>
+	<table class="table additional-margin" id="error-code-example" style="display: none;">
+		<tbody>
+			<tr>
+				<td><strong>API key not found</strong></td>
+				<td>Check your API key value</td>
+			</tr>
+			<tr>
+				<td><strong>IP address not allowed</strong></td>
+				<td>This IP address has no permission to use this API key</td>
+			</tr>
+			<tr>
+				<td><strong>No permission found</strong></td>
+				<td>API key hasn't got permission for calling this function</td>
+			</tr>
+			<tr>
+				<td><strong>Invalid nonce</strong></td>
+				<td>Check your nonce value. It must be greater than last nonce used</td>
+			</tr>
+			<tr>
+				<td><strong>Invalid signature</strong></td>
+				<td>Posted signature doesn't match with ours</td>
+			</tr>
+			<tr>
+				<td><strong>Authentication failed</strong></td>
+				<td>Can't find customer with selected API key</td>
+			</tr>
+			<tr>
+				<td><strong>Missing key, signature and nonce parameters</strong></td>
+				<td>Parameters were not posted in API request</td>
+			</tr>
+			<tr>
+				<td><strong>Your account is frozen</strong></td>
+				<td>Contact support to unfreeze your account</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h1>Private Functions</h1>
+
+	<h4 id="account-balance">Account balance</h4>
+	<p>This API call is cached for 10 seconds. This call will be executed 
+on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/balance/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/balance/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns all the balances.</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/balance/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns the values relevant to the specified <strong>currency_pair</strong> parameter. Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>usd_balance</strong></td>
+				<td><span class="emphasized">USD balance.</span></td>
+			</tr>
+			<tr>
+				<td><strong>btc_balance</strong></td>
+				<td><span class="emphasized">BTC balance.</span></td>
+			</tr>
+			<tr>
+				<td><strong>eur_balance</strong></td>
+				<td><span class="emphasized">EUR balance.</span></td>
+			</tr>
+			<tr>
+				<td><strong>xrp_balance</strong></td>
+				<td><span class="emphasized">XRP balance.</span></td>
+			</tr>
+			<tr>
+				<td><strong>usd_reserved</strong></td>
+				<td><span class="emphasized">USD reserved.</span></td>
+			</tr>
+			<tr>
+				<td><strong>btc_reserved</strong></td>
+				<td><span class="emphasized">BTC reserved.</span></td>
+			</tr>
+			<tr>
+				<td><strong>eur_reserved</strong></td>
+				<td><span class="emphasized">EUR reserved.</span></td>
+			</tr>
+			<tr>
+				<td><strong>xrp_reserved</strong></td>
+				<td><span class="emphasized">XRP reserved.</span></td>
+			</tr>
+			<tr>
+				<td><strong>usd_available</strong></td>
+				<td><span class="emphasized">USD available for trading.</span></td>
+			</tr>
+			<tr>
+				<td><strong>btc_available</strong></td>
+				<td><span class="emphasized">BTC available for trading.</span></td>
+			</tr>
+			<tr>
+				<td><strong>eur_available</strong></td>
+				<td><span class="emphasized">EUR available for trading.</span></td>
+			</tr>
+			<tr>
+				<td><strong>xrp_available</strong></td>
+				<td><span class="emphasized">XRP available for trading.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">If https://www.bitstamp.net/api/v2/balance/</span></td>
+			</tr>
+			<tr>
+				<td><strong>btcusd_fee</strong></td>
+				<td><span class="emphasized">Customer BTC/USD trading fee.</span></td>
+			</tr>
+			<tr>
+				<td><strong>btceur_fee</strong></td>
+				<td><span class="emphasized">Customer BTC/EUR trading fee.</span></td>
+			</tr>
+			<tr>
+				<td><strong>eurusd_fee</strong></td>
+				<td><span class="emphasized">Customer EUR/USD trading fee.</span></td>
+			</tr>
+			<tr>
+				<td><strong>xrpusd_fee</strong></td>
+				<td><span class="emphasized">Customer XRP/USD trading fee.</span></td>
+			</tr>
+			<tr>
+				<td><strong>xrpeur_fee</strong></td>
+				<td><span class="emphasized">Customer XRP/EUR trading fee.</span></td>
+			</tr>
+			<tr>
+				<td><strong>xrpbtc_fee</strong></td>
+				<td><span class="emphasized">Customer XRP/BTC trading fee.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Other</span></td>
+			</tr>
+			<tr>
+				<td><strong>fee</strong></td>
+				<td><span class="emphasized">Customer trading fee.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-account-balance"><span class="fa fa-arrow-circle-o-down"></span>Balance errors</p>
+	<table class="table additional-margin" id="error-account-balance" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="user-transactions">User transactions</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/user_transactions/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns transactions for all currency pairs.</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/user_transactions/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns transactions for all currency pairs.</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/user_transactions/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>offset</strong></td>
+				<td>
+					<span class="emphasized">Skip that many transactions before returning results (default: 0).</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>limit</strong></td>
+				<td>
+					<span class="emphasized">Limit result to that many transactions (default: 100; maximum: 1000).</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>sort</strong></td>
+				<td>
+					<span class="emphasized">Sorting by date and time: asc - ascending; desc - descending (default: desc).</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success - Returns a descending list of transactions, represented as dictionaries.</td>
+			</tr>
+			<tr>
+				<td><strong>datetime</strong></td>
+				<td><span class="emphasized">Date and time.</span></td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Transaction ID.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td><span class="emphasized">Transaction type: 0 - deposit; 1 - withdrawal; 2 - market trade; 14 - sub account transfer.</span></td>
+			</tr>
+			<tr>
+				<td><strong>usd</strong></td>
+				<td><span class="emphasized">USD amount.</span></td>
+			</tr>
+			<tr>
+				<td><strong>eur</strong> (v2 calls only)</td>
+				<td><span class="emphasized">EUR amount.</span></td>
+			</tr>
+			<tr>
+				<td><strong>btc</strong></td>
+				<td><span class="emphasized">BTC amount.</span></td>
+			</tr>
+			<tr>
+				<td><strong>xrp</strong> (v2 calls only)</td>
+				<td><span class="emphasized">XRP amount.</span></td>
+			</tr>
+			<tr>
+				<td><strong>btc_usd</strong> (or <strong>btc_eur</strong> if available)</td>
+				<td><span class="emphasized">Exchange rate.</span></td>
+			</tr>
+			<tr>
+				<td><strong>fee</strong></td>
+				<td><span class="emphasized">Transaction fee.</span></td>
+			</tr>
+			<tr>
+				<td><strong>order_id</strong></td>
+				<td><span class="emphasized">Executed order ID.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong> (v2 calls only)</td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong> (v2 calls only)</td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-user-transactions"><span class="fa fa-arrow-circle-o-down"></span>User_transactions errors</p>
+	<table class="table additional-margin" id="error-user-transactions" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Invalid offset</strong></td>
+				<td>Offset should be positive number</td>
+			</tr>
+			<tr>
+				<td><strong>Limit too large</strong></td>
+				<td>Max value of limit parameter is 1000</td>
+			</tr>
+			<tr>
+				<td><strong>Invalid limit</strong></td>
+				<td>Limit parameter should be number from 1 to 1000</td>
+			</tr>
+			<tr>
+				<td><strong>Invalid sort parameter</strong></td>
+				<td>Sort parameter can only be 'asc' or 'desc'</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="open-orders">Open orders</h4>
+	<p>This API call is cached for 10 seconds. This call will be executed 
+on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/open_orders/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns data for the BTC/USD currency pair.</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/open_orders/all/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Returns data for all currency pairs.</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/open_orders/{currency_pair}</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success - Returns a list of open orders, where each order is represented as a dictionary.</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Transaction ID.</span></td>
+			</tr>
+			<tr>
+				<td><strong>datetime</strong></td>
+				<td><span class="emphasized">Date and time.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type </strong></td>
+				<td><span class="emphasized">Type: 0 - buy; 1 - sell.</span></td>
+			</tr>
+			<tr>
+				<td><strong>price </strong></td>
+				<td><span class="emphasized">Price.</span></td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">Amount.</span></td>
+			</tr>
+			<tr>
+				<td><strong>currency_pair</strong> (if <strong>all</strong> currency pairs)</td>
+				<td><span class="emphasized">Currency Pair.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong> (v2 calls only)</td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong> (v2 calls only)</td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-open-orders"><span class="fa fa-arrow-circle-o-down"></span>Open_orders errors</p>
+	<table class="table additional-margin" id="error-open-orders" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="order-status">Order status</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/order_status/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td>
+					<span class="emphasized">Order ID.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized"> In Queue, Open or Finished.</span></td>
+			</tr>
+			<tr>
+				<td><strong>transactions</strong></td>
+				<td><span class="emphasized">Each transaction in dictionary is 
+represented as a list of tid, usd, price, fee, btc, datetime and type (0
+ - deposit; 1 - withdrawal; 2 - market trade).</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-order-status"><span class="fa fa-arrow-circle-o-down"></span>Order_status errors</p>
+	<table class="table additional-margin" id="error-order-status" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing id POST param</strong></td>
+				<td>Id parameter missing</td>
+			</tr>
+			<tr>
+				<td><strong>Invalid order id</strong></td>
+				<td>Order id parameter can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>Order not found</strong></td>
+				<td>Order with that id was not found in our system</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="cancel-order">Cancel order</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/cancel_order/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/cancel_order/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td>
+					<span class="emphasized">Order ID.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">If https://www.bitstamp.net/api/v2/cancel_order/</span></td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Order id.</span></td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">Order amount.</span></td>
+			</tr>
+			<tr>
+				<td><strong>price</strong></td>
+				<td><span class="emphasized">Order price.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td><span class="emphasized">Order type.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">If https://www.bitstamp.net/api/cancel_order/</span></td>
+			</tr>
+			<tr>
+				<td><strong>"True"</strong></td>
+				<td><span class="emphasized">Order has been found and canceled.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>error</strong></td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-cancel-order"><span class="fa fa-arrow-circle-o-down"></span>Cancel_order errors</p>
+	<table class="table additional-margin" id="error-cancel-order" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing id POST param</strong></td>
+				<td>Id parameter missing</td>
+			</tr>
+			<tr>
+				<td><strong>Invalid order id</strong></td>
+				<td>Order id parameter can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>Order not found</strong></td>
+				<td>Order with that id was not found in our system</td>
+			</tr>
+			<tr>
+				<td><strong>Order in queue. Please try again later.</strong></td>
+				<td>You can only cancel your order when order is in status Open.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="cancel-all-orders">Cancel all orders</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/cancel_all_orders/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">This call will cancel all open orders.Returns "true" if all orders have been canceled, "false" if it failed.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-cancel-all-orders"><span class="fa fa-arrow-circle-o-down"></span>Cancel_all_orders errors</p>
+	<table class="table additional-margin" id="error-cancel-all-orders" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="buy-order">Buy limit order</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/buy/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Opens an order in the BTC/USD orderbook.</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/buy/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">Amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>price</strong></td>
+				<td>
+					<span class="emphasized">Price.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>limit_price</strong></td>
+				<td>
+					<span class="emphasized">If the order gets executed, a new sell order will be placed, with "limit_price" as its price.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>daily_order</strong> (Optional)</td>
+				<td>
+					<span class="emphasized">Opens buy limit order which will be canceled at 0:00 UTC unless it already has been executed. Possible value: <strong>True</strong></span><span class="v2-mark">API v2</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Order ID.</span></td>
+			</tr>
+			<tr>
+				<td><strong>datetime</strong></td>
+				<td><span class="emphasized">Date and time.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td><span class="emphasized">0 (buy) or 1 (sell).</span></td>
+			</tr>
+			<tr>
+				<td><strong>price</strong></td>
+				<td><span class="emphasized">Price.</span></td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">Amount.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong> (v2 calls only)</td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong> (v2 calls only)</td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-buy-order"><span class="fa fa-arrow-circle-o-down"></span>Buy errors</p>
+	<table class="table additional-margin" id="error-buy-order" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or price POST parameters</strong></td>
+				<td>Missing one or both parameters</td>
+			</tr>
+			<tr>
+				<td><strong>'parameter': Enter a number. Use "." as a decimal point.</strong></td>
+				<td>'parameter' can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>Minimum order size is 5 USD</strong></td>
+				<td>Order value must be at least $5</td>
+			</tr>
+			<tr>
+				<td><strong>Price is more than 20% above market price.</strong></td>
+				<td>Order price must not exceed 20% of current price</td>
+			</tr>
+			<tr>
+				<td><strong>You need 'order_value' USD to open that order. You have 
+only 'available_fiat' USD available. Check your account balance for 
+details.</strong></td>
+				<td>Account has less 'available_fiat' that are required to make this order</td>
+			</tr>
+			<tr>
+				<td><strong>Sell if executed price must be higher than buy price.</strong></td>
+				<td>'limit_price' must be larger than 'price' parameter</td>
+			</tr>
+			<tr>
+				<td><strong>Both limit_price and daily_order cannot be set.</strong></td>
+				<td>Only one of those parameters can be set<span class="v2-mark">API v2</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="buy-market-order">Buy market order</h4>
+	<p><span class="fa fa-exclamation-triangle"></span>
+		<span> By placing a market order you acknowledge that the execution of
+ your order depends on the market conditions and that these conditions 
+may be subject to sudden changes that cannot be foreseen.</span></p>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/buy/market/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">Amount.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Order ID.</span></td>
+			</tr>
+			<tr>
+				<td><strong>datetime</strong></td>
+				<td><span class="emphasized">Date and time.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td><span class="emphasized">0 (buy) or 1 (sell).</span></td>
+			</tr>
+			<tr>
+				<td><strong>price</strong></td>
+				<td><span class="emphasized">Price.</span></td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">Amount.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong> (v2 calls only)</td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong> (v2 calls only)</td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-market-buy-order"><span class="fa fa-arrow-circle-o-down"></span>Market buy errors</p>
+	<table class="table additional-margin" id="error-market-buy-order" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or price POST parameters</strong></td>
+				<td>Missing one or both parameters</td>
+			</tr>
+			<tr>
+				<td><strong>'parameter': Enter a number. Use "." as a decimal point.</strong></td>
+				<td>'parameter' can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>Minimum order size is 5 USD</strong></td>
+				<td>Order value must be at least $5</td>
+			</tr>
+			<tr>
+				<td><strong>You can only buy 'amount' 'currency'. Check your account balance for details.</strong></td>
+				<td>Account has less 'available_currency' that are required to make this order</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="sell-order">Sell limit order</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/sell/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Opens an order in the BTC/USD orderbook.</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/sell/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">Amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>price</strong></td>
+				<td>
+					<span class="emphasized">Price.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>limit_price</strong></td>
+				<td>
+					<span class="emphasized">If the order gets executed, a new buy order will be placed, with "limit_price" as its price.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>daily_order</strong> (Optional)</td>
+				<td>
+					<span class="emphasized">Opens sell limit order which will be canceled at 0:00 UTC unless it already has been executed. Possible value: <strong>True</strong><span class="v2-mark">API v2</span></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Order ID.</span></td>
+			</tr>
+			<tr>
+				<td><strong>datetime</strong></td>
+				<td><span class="emphasized">Date and time.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td><span class="emphasized">0 (buy) or 1 (sell).</span></td>
+			</tr>
+			<tr>
+				<td><strong>price</strong></td>
+				<td><span class="emphasized">Price.</span></td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">Amount.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong> (v2 calls only)</td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong> (v2 calls only)</td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-sell-order"><span class="fa fa-arrow-circle-o-down"></span>Sell errors</p>
+	<table class="table additional-margin" id="error-sell-order" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or price POST parameters</strong></td>
+				<td>Missing one or both parameters</td>
+			</tr>
+			<tr>
+				<td><strong>'parameter': Enter a number. Use "." as a decimal point.</strong></td>
+				<td>'parameter' can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>Minimum order size is $5</strong></td>
+				<td>Order value must be at least $5</td>
+			</tr>
+			<tr>
+				<td><strong>Price is more than 20% below market price.</strong></td>
+				<td>Order price must not exceed 20% of current price</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'available_btc' BTC available. Check your account balance for details.</strong></td>
+				<td>Account has less 'available_btc' that are required to make this order</td>
+			</tr>
+			<tr>
+				<td><strong>Buy if executed price must be lower than sell price.</strong></td>
+				<td>'limit_price' must be lower than 'price' parameter</td>
+			</tr>
+			<tr>
+				<td><strong>Both limit_price and daily_order cannot be set.</strong></td>
+				<td>Only one of those parameters can be set<span class="v2-mark">API v2</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="sell-market-order">Sell market order</h4>
+	<p><span class="fa fa-exclamation-triangle"></span>
+		<span> By placing a market order you acknowledge that the execution of
+ your order depends on the market conditions and that these conditions 
+may be subject to sudden changes that cannot be foreseen.</span></p>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/sell/market/{currency_pair}/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Supported values for <strong>currency_pair</strong>: btcusd, btceur, eurusd, xrpusd, xrpeur, xrpbtc, ltcusd, ltceur, ltcbtc, ethusd, etheur, ethbtc, bchusd, bcheur, bchbtc</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">Amount.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Order ID.</span></td>
+			</tr>
+			<tr>
+				<td><strong>datetime</strong></td>
+				<td><span class="emphasized">Date and time.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td><span class="emphasized">0 (buy) or 1 (sell).</span></td>
+			</tr>
+			<tr>
+				<td><strong>price</strong></td>
+				<td><span class="emphasized">Price.</span></td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">Amount.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong> (v2 calls only)</td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong> (v2 calls only)</td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-market-sell-order"><span class="fa fa-arrow-circle-o-down"></span>Market sell errors</p>
+	<table class="table additional-margin" id="error-market-sell-order" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or price POST parameters</strong></td>
+				<td>Missing one or both parameters</td>
+			</tr>
+			<tr>
+				<td><strong>'parameter': Enter a number. Use "." as a decimal point.</strong></td>
+				<td>'parameter' can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>Minimum order size is $5</strong></td>
+				<td>Order value must be at least $5</td>
+			</tr>
+			<tr>
+				<td><strong>You can only sell 'amount' 'currency'. Check your account balance for details.</strong></td>
+				<td>Account has less 'available_currency' that are required to make this order</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="withdrawal-requests">Withdrawal requests</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/withdrawal_requests/</span>
+				</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/withdrawal-requests/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>timedelta</strong> (Optional, default 86400)</td>
+				<td>
+					<span class="emphasized">Withdrawal requests from number of seconds ago to now (max. 50000000).</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Order ID.</span></td>
+			</tr>
+			<tr>
+				<td><strong>datetime</strong></td>
+				<td><span class="emphasized">Date and time.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td><span class="emphasized">0 (SEPA), 1 (bitcoin), 2(WIRE transfer), 14 (XRP), 15 (litecoin), 16 (ethereum).</span></td>
+			</tr>
+			<tr>
+				<td><strong>currency</strong> (v2 calls only)</td>
+				<td><span class="emphasized">Currency.</span></td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">Amount.</span></td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized">0 (open), 1 (in process), 2 (finished), 3 (canceled) or 4 (failed).</span></td>
+			</tr>
+			<tr>
+				<td><strong>data</strong> (v1 calls only)</td>
+				<td><span class="emphasized">Additional withdrawal request data.</span></td>
+			</tr>
+			<tr>
+				<td><strong>address</strong> (crypto withdrawals only)</td>
+				<td><span class="emphasized">Withdrawal address.</span></td>
+			</tr>
+			<tr>
+				<td><strong>transaction_id</strong> (crypto withdrawals only)</td>
+				<td><span class="emphasized">Transaction id.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-withdrawal-requests"><span class="fa fa-arrow-circle-o-down"></span>Withdrawal_requests errors</p>
+	<table class="table additional-margin" id="error-withdrawal-requests" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="bitcoin-withdrawal">Bitcoin withdrawal</h4>
+	<p>This call will be executed on the account, to which the used API key is bound to. This call is for your main account only.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/bitcoin_withdrawal/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">Bitcoin amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td>
+					<span class="emphasized">Bitcoin address.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>instant</strong></td>
+				<td>
+					<span class="emphasized">0 (false) or 1 (true). If the destination 
+address supports BitGo Instant deposits and you need instant delivery of
+ Bitcoins with zero confirmations. Additional fees apply.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Withdrawal ID.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-bitcoin-withdrawal"><span class="fa fa-arrow-circle-o-down"></span>Bitcoin_withdrawal errors</p>
+	<table class="table additional-margin" id="error-bitcoin-withdrawal" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or address POST parameters</strong></td>
+				<td>One or both parameters missing</td>
+			</tr>
+			<tr>
+				<td><strong>Instant parameter needs to be an integer (0 - false or 1 - true)</strong></td>
+				<td>Instant parameter can only be 0 or 1</td>
+			</tr>
+			<tr>
+				<td><strong>User not verified</strong></td>
+				<td>You need to verify account before withdrawal</td>
+			</tr>
+			<tr>
+				<td><strong>Bitcoin withdrawals are currently unavailable for your account.</strong></td>
+				<td>Contact support for additional information.</td>
+			</tr>
+			<tr>
+				<td><strong>Not allowed to withdraw to specified bitcoin address</strong></td>
+				<td>API key is set for withdrawing to another bitcoin address</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value is greater than or equal to 0.00006000</strong></td>
+				<td>Minimum withdrawal amount is 0.00006</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value has at least 25 characters (it has x)</strong><br>
+					<strong>Ensure this value has at most 34 characters (it has x)</strong></td>
+				<td>Address parameter must be between 25 and 34 characters long</td>
+			</tr>
+			<tr>
+				<td><strong>Enter a number. Use "." as a decimal point.</strong></td>
+				<td>Amount parameter can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'available' BTC available. Check your account balance for details.</strong></td>
+				<td>Account has less 'available' BTC that are required to make this withdrawal</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="litecoin-withdrawal">Litecoin withdrawal</h4>
+	<p>This call will be executed on the account, to which the used API key is bound to. This call is for your main account only.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/ltc_withdrawal/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">Litecoin amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td>
+					<span class="emphasized">Litecoin address.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Withdrawal ID.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-litecoin-withdrawal"><span class="fa fa-arrow-circle-o-down"></span>Litecoin_withdrawal errors</p>
+	<table class="table additional-margin" id="error-litecoin-withdrawal" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or address POST parameters</strong></td>
+				<td>One or both parameters missing</td>
+			</tr>
+			<tr>
+				<td><strong>User not verified</strong></td>
+				<td>You need to verify account before withdrawal</td>
+			</tr>
+			<tr>
+				<td><strong>Litecoin withdrawals are currently unavailable for your account.</strong></td>
+				<td>Contact support for additional information.</td>
+			</tr>
+			<tr>
+				<td><strong>Not allowed to withdraw to specified litecoin address</strong></td>
+				<td>API key is set for withdrawing to another litecoin address</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value is greater than or equal to 0.00006000</strong></td>
+				<td>Minimum withdrawal amount is 0.00006</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value has at least 25 characters (it has x)</strong><br>
+					<strong>Ensure this value has at most 34 characters (it has x)</strong></td>
+				<td>Address parameter must be between 25 and 34 characters long</td>
+			</tr>
+			<tr>
+				<td><strong>Enter a number. Use "." as a decimal point.</strong></td>
+				<td>Amount parameter can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'available' LTC available. Check your account balance for details.</strong></td>
+				<td>Account has less 'available' LTC that are required to make this withdrawal</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="litecoin-deposit-address">Litecoin deposit address</h4>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/ltc_address/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Returns your litecoin deposit address.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-litecoin-deposit-address"><span class="fa fa-arrow-circle-o-down"></span>Litecoin_deposit_address errors</p>
+	<table class="table additional-margin" id="error-litecoin-deposit-address" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="eth-withdrawal">ETH withdrawal</h4>
+	<p>This call will be executed on the account, to which the used API key is bound to. This call is for your main account only.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/eth_withdrawal/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">ETH amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td>
+					<span class="emphasized">ETH address.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Withdrawal ID.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-eth-withdrawal"><span class="fa fa-arrow-circle-o-down"></span>ETH_withdrawal errors</p>
+	<table class="table additional-margin" id="error-eth-withdrawal" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or address POST parameters</strong></td>
+				<td>One or both parameters missing</td>
+			</tr>
+			<tr>
+				<td><strong>User not verified</strong></td>
+				<td>You need to verify account before withdrawal</td>
+			</tr>
+			<tr>
+				<td><strong>ETH withdrawals are currently unavailable for your account.</strong></td>
+				<td>Contact support for additional information.</td>
+			</tr>
+			<tr>
+				<td><strong>Not allowed to withdraw to specified ETH address</strong></td>
+				<td>API key is set for withdrawing to another ETH address</td>
+			</tr>
+			<tr>
+				
+				<td><strong>Ensure this value is greater than or equal to 0.00006000</strong></td>
+				<td>Minimum withdrawal amount is 0.00006</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value has at least 40 characters (it has x)</strong><br>
+					<strong>Ensure this value has at most 42 characters (it has x)</strong></td>
+				<td>Address parameter must be between 40 and 42 characters long</td>
+			</tr>
+			<tr>
+				<td><strong>Enter a number. Use "." as a decimal point.</strong></td>
+				<td>Amount parameter can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'available' ETH available. Check your account balance for details.</strong></td>
+				<td>Account has less 'available' ETH that are required to make this withdrawal</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="eth-deposit-address">ETH deposit address</h4>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/eth_address/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Returns your ETH deposit address.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-eth-deposit-address"><span class="fa fa-arrow-circle-o-down"></span>ETH_deposit_address errors</p>
+	<table class="table additional-margin" id="error-eth-deposit-address" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Address not ready due to network congestion. Please try again in few minutes.</strong></td>
+				<td>We couldn't provide you with an address due to network congestion.</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="bitcoin-deposit-address">Bitcoin deposit address</h4>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/bitcoin_deposit_address/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Returns your bitcoin deposit address.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-bitcoin-deposit-address"><span class="fa fa-arrow-circle-o-down"></span>Bitcoin_deposit_address errors</p>
+	<table class="table additional-margin" id="error-bitcoin-deposit-address" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="unconfirmed-bitcoin-deposits">Unconfirmed bitcoin deposits</h4>
+	<p>This API call is cached for 60 seconds. This call will be executed 
+on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/unconfirmed_btc/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong> - list of unconfirmed bitcoin transactions. Each transaction is represented as dictionary</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">Bitcoin amount.</span></td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td><span class="emphasized">Deposit address used.</span></td>
+			</tr>
+			<tr>
+				<td><strong>confirmations</strong></td>
+				<td><span class="emphasized">Number of confirmations.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-unconfirmed-bitcoin-deposits"><span class="fa fa-arrow-circle-o-down"></span>Unconfirmed_btc errors</p>
+	<table class="table additional-margin" id="error-unconfirmed-bitcoin-deposits" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="ripple-withdrawal">Ripple withdrawal</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/ripple_withdrawal/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">Currency amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td>
+					<span class="emphasized">Bitcoin address.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>currency</strong></td>
+				<td>
+					<span class="emphasized">Currency.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Returns "true" if successful.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-ripple-withdrawal"><span class="fa fa-arrow-circle-o-down"></span>Ripple_withdrawal errors</p>
+	<table class="table additional-margin" id="error-ripple-withdrawal" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or address and/or currency POST parameters</strong></td>
+				<td>One or all parameters are missing</td>
+			</tr>
+			<tr>
+				<td><strong>User not verified</strong></td>
+				<td>You need to verify account before withdrawal</td>
+			</tr>
+			<tr>
+				<td><strong>Ripple withdrawals are currently unavailable for your account.</strong></td>
+				<td>Contact support for additional information.</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value has at least 25 characters (it has x)</strong><br>
+					<strong>Ensure this value has at most 50 characters (it has x)</strong></td>
+				<td>Address parameter must be between 25 and 50 characters long</td>
+			</tr>
+			<tr>
+				<td><strong>'parameter': Enter a number. Use "." as a decimal point.</strong></td>
+				<td>'parameter' can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'available' 'currency' available. Check your account balance for details.</strong></td>
+				<td>Account has less 'available' 'currency' that are required to make this withdrawal</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="ripple-deposit-address">Ripple deposit address</h4>
+	<p>This API call is cached for 60 seconds. This call will be executed 
+on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/ripple_address/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Returns your ripple deposit address.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-ripple-deposit-address"><span class="fa fa-arrow-circle-o-down"></span>Ripple_address errors</p>
+	<table class="table additional-margin" id="error-ripple-deposit-address" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="bch-withdrawal">BCH withdrawal</h4>
+	<p>This call will be executed on the account, to which the used API key is bound to. This call is for your main account only.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/bch_withdrawal/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">BCH amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td>
+					<span class="emphasized">BCH address.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Withdrawal ID.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-bch-withdrawal"><span class="fa fa-arrow-circle-o-down"></span>BCH_withdrawal errors</p>
+	<table class="table additional-margin" id="error-bch-withdrawal" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or address POST parameters</strong></td>
+				<td>One or both parameters missing</td>
+			</tr>
+			<tr>
+				<td><strong>User not verified</strong></td>
+				<td>You need to verify account before withdrawal</td>
+			</tr>
+			<tr>
+				<td><strong>BCH withdrawals are currently unavailable for your account.</strong></td>
+				<td>Contact support for additional information.</td>
+			</tr>
+			<tr>
+				<td><strong>Not allowed to withdraw to specified BCH address</strong></td>
+				<td>API key is set for withdrawing to another BCH address</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value is greater than or equal to 0.00006000</strong></td>
+				<td>Minimum withdrawal amount is 0.00006</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value has at least 25 characters (it has x)</strong><br>
+					<strong>Ensure this value has at most 34 characters (it has x)</strong></td>
+				<td>Address parameter must be between 25 and 34 characters long</td>
+			</tr>
+			<tr>
+				<td><strong>Enter a number. Use "." as a decimal point.</strong></td>
+				<td>Amount parameter can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'available' BCH available. Check your account balance for details.</strong></td>
+				<td>Account has less 'available' BCH that are required to make this withdrawal</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="bch-deposit-address">BCH deposit address</h4>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/bch_address/</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="emphasized">Returns your BCH deposit address.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-bch-deposit-address"><span class="fa fa-arrow-circle-o-down"></span>BCH_deposit_address errors</p>
+	<table class="table additional-margin" id="error-bch-deposit-address" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="sub-to-main-transfer">Transfer balance from Sub to Main account</h4>
+	<p>Transfers the desired balance from a Sub Account to your Main 
+Account. Can be called by either the Main Account or a Sub Account, but 
+requires a permission in both cases. The subAccount parameter must be 
+provided if the Main Account is initiating the call. If a Sub Account is
+ making the call, then it is the target Sub Account for the transfer and
+ no further clarification is required. In that case, passing this 
+parameter will have no additional effect.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/transfer-to-main/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">Amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>currency</strong></td>
+				<td>
+					<span class="emphasized">Currency.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>subAccount</strong> (Optional)</td>
+				<td>
+					<span class="emphasized">The Sub Account unique identifier.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized">"ok" or "error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong> (available only if status is "error")</td>
+				<td><span class="emphasized">Additional error info.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-sub-to-main-transfer"><span class="fa fa-arrow-circle-o-down"></span>Transfer-to-main errors</p>
+	<table class="table additional-margin" id="error-sub-to-main-transfer" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>'parameter': Enter a number. Use "." as a decimal point.</strong></td>
+				<td>'parameter' can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'available' 'currency' available. Check your account balance for details.</strong></td>
+				<td>Account has less 'available' 'currency' that are required to make this transfer</td>
+			</tr>
+			<tr>
+				<td><strong>Select a valid choice. X is not one of the available choices.</strong></td>
+				<td>X is not valid currency. Possible choices BTC, USD, EUR, XRP, LTC, ETH, BCH.</td>
+			</tr>
+			<tr>
+				<td><strong>Sub account with identifier "X" does not exist.</strong></td>
+				<td>Can't find sub account with id X.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="main-to-sub-transfer">Transfer balance from Main to Sub Account</h4>
+	<p>Transfers the desired balance from your Main Account to a Sub 
+Account, specified by the subAccount parameter. This call can only be 
+performed by your Main Account.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/transfer-from-main/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">Amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>currency</strong></td>
+				<td>
+					<span class="emphasized">Currency.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>subAccount</strong></td>
+				<td>
+					<span class="emphasized">The Sub Account unique identifier.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized">"ok" or "error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong> (available only if status is "error")</td>
+				<td><span class="emphasized">Additional error info.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-main-to-sub-transfer"><span class="fa fa-arrow-circle-o-down"></span>Transfer-from-main errors</p>
+	<table class="table additional-margin" id="error-main-to-sub-transfer" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>'parameter': Enter a number. Use "." as a decimal point.</strong></td>
+				<td>'parameter' can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'available' 'currency' available. Check your account balance for details.</strong></td>
+				<td>Account has less 'available' 'currency' that are required to make this transfer</td>
+			</tr>
+			<tr>
+				<td><strong>Select a valid choice. X is not one of the available choices.</strong></td>
+				<td>X is not valid currency. Possible choices BTC, USD, EUR, XRP, LTC, ETH, BCH.</td>
+			</tr>
+			<tr>
+				<td><strong>Sub account with identifier "X" does not exist.</strong></td>
+				<td>Can't find sub account with id X.</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="xrp-withdrawal">XRP withdrawal</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/xrp_withdrawal/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">XRP amount.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td>
+					<span class="emphasized">XRP address.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>destination_tag</strong> (Optional)</td>
+				<td>
+					<span class="emphasized">Address destination tag.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Withdrawal ID.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-xrp-withdrawal"><span class="fa fa-arrow-circle-o-down"></span>XRP_withdrawal errors</p>
+	<table class="table additional-margin" id="error-xrp-withdrawal" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Missing amount and/or address POST parameters</strong></td>
+				<td>One or both parameters missing</td>
+			</tr>
+			<tr>
+				<td><strong>XRP withdrawals are currently unavailable for your account.</strong></td>
+				<td>Contact support for additional information.</td>
+			</tr>
+			<tr>
+				<td><strong>Not allowed to withdraw to specified XRP address</strong></td>
+				<td>API key is set for withdrawing to another XRP address</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value is greater than or equal to 20</strong></td>
+				<td>Minimum withdrawal amount is 20</td>
+			</tr>
+			<tr>
+				<td><strong>Ensure this value has at least 25 characters (it has x)</strong><br>
+					<strong>Ensure this value has at most 34 characters (it has x)</strong></td>
+				<td>Address parameter must be between 25 and 34 characters long</td>
+			</tr>
+			<tr>
+				<td><strong>Enter a number. Use "." as a decimal point.</strong></td>
+				<td>Amount parameter can only be number</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'available' XRP available. Check your account balance for details.</strong></td>
+				<td>Account has less 'available' XRP that are required to make this withdrawal</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="ripple-deposit-address">XRP deposit address</h4>
+	<p>This call will be executed on the account (Sub or Main), to which the used API key is bound to.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/xrp_address/</span>
+					<span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<span class="emphasized">Returns your XRP deposit address and destination tag.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-xrp-deposit-address">
+		<span class="fa fa-arrow-circle-o-down"></span>XRP_address errors
+	</p>
+	<table class="table additional-margin" id="error-xrp-deposit-address" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 id="bank-withdrawal-open">Open bank withdrawal</h4>
+	<p>Opens a bank withdrawal request (<strong>SEPA</strong> or <strong>international</strong>).
+ Withdrawal requests opened via API are automatically confirmed (no 
+confirmation e-mail will be sent), but are processed just like 
+withdrawals opened through the platform's interface. This call can only 
+be performed by your Main Account.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/withdrawal/open/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td>
+					<span class="emphasized">The amount to withdraw.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>account_currency</strong></td>
+				<td>
+					<span class="emphasized">The balance from which you wish to withdraw. Can be either "USD" or "EUR".</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>name</strong></td>
+				<td>
+					<span class="emphasized">Full user or company name.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>IBAN</strong></td>
+				<td>
+					<span class="emphasized">User or company IBAN.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>BIC</strong></td>
+				<td>
+					<span class="emphasized">The target bank BIC.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td>
+					<span class="emphasized">User or company address.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>postal_code</strong></td>
+				<td>
+					<span class="emphasized">User or company postal code.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>city</strong></td>
+				<td>
+					<span class="emphasized">User or company city.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>country</strong></td>
+				<td>
+					<span class="emphasized">User or company country. Country codes must be in accordance with the <a href="https://en.wikipedia.org/wiki/ISO_3166-1#Officially_assigned_code_elements" target="_blank">ISO 3166-1</a> standard (use two character Alpha-2 codes). <strong>Disclaimer:</strong>
+ Not all country choices listed at this reference URL are supported. For
+ a detailed list please refer to our platform's withdrawal interfaces.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td>
+					<span class="emphasized">Type of the withdrawal request ("sepa" or "international").</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>bank_name</strong> (international withdrawals only)</td>
+				<td>
+					<span class="emphasized">Target bank name.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>bank_address</strong> (international withdrawals only)</td>
+				<td>
+					<span class="emphasized">Target bank address.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>bank_postal_code</strong> (international withdrawals only)</td>
+				<td>
+					<span class="emphasized">Target bank postal code.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>bank_city</strong> (international withdrawals only)</td>
+				<td>
+					<span class="emphasized">Target bank city.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>bank_country</strong> (international withdrawals only)</td>
+				<td>
+					<span class="emphasized">Target bank country. Country codes must be in accordance with the <a href="https://en.wikipedia.org/wiki/ISO_3166-1#Officially_assigned_code_elements" target="_blank">ISO 3166-1</a> standard (use two character Alpha-2 codes). <strong>Disclaimer:</strong>
+ Not all country choices listed at this reference URL are supported. For
+ a detailed list please refer to our platform's withdrawal interfaces.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>currency</strong> (international withdrawals only)</td>
+				<td>
+					<span class="emphasized">The currency in which the funds should be 
+withdrawn (may involve conversion fees). Currency codes must be in 
+accordance with the <a href="https://en.wikipedia.org/wiki/ISO_4217#Active_codes" target="_blank">ISO 4217</a> standard. <strong>Disclaimer:</strong>
+ Not all currency choices listed at this reference URL are supported. 
+For a detailed list please refer to our platform's withdrawal 
+interfaces.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>comment</strong> (Optional)</td>
+				<td>
+					<span class="emphasized">Withdrawal comment.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">Id of the opened withdrawal request.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong> (available only if status is "error")</td>
+				<td><span class="emphasized">Additional error info.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-bank-withdrawal-open">
+		<span class="fa fa-arrow-circle-o-down"></span>Open bank withdrawal errors
+	</p>
+	<table class="table additional-margin" id="error-bank-withdrawal-open" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Please update your profile with your FATCA information, before withdrawing.</strong></td>
+				<td>You must have the FATCA information updated on your profile, before using this service.</td>
+			</tr>
+			<tr>
+				<td><strong>Opening bank withdrawals with sub account API keys is not supported.</strong></td>
+				<td>This API endpoint can only be utilized by your main account.</td>
+			</tr>
+			<tr>
+				<td><strong>'X': ['This field is required.']</strong></td>
+				<td>Parameter X is required for this call.</td>
+			</tr>
+			<tr>
+				<td><strong>'X': ['Select a valid choice. Y is not one of the available choices.']</strong></td>
+				<td>Y is not a valid value for parameter X.</td>
+			</tr>
+			<tr>
+				<td><strong>Bank withdrawals temporarily disabled.</strong></td>
+				<td>No new bank withdrawals can be opened at this time.</td>
+			</tr>
+			<tr>
+				<td><strong>Unsupported withdrawal type (must be either SEPA or international).</strong></td>
+				<td>When opening bank withdrawals, you must specify one of the two supported types: SEPA or international.</td>
+			</tr>
+			<tr>
+				<td><strong>You have only 'amount' <span class="emphasized">currency</span> available. Check your account balance for details.</strong></td>
+				<td>To open this withdrawal, your balance must have at least 'amount' of target <span class="emphasized">currency</span> available.</td>
+			</tr>
+			<tr>
+				<td><strong>'X': ['Enter a number. Use "." as a decimal point.']</strong></td>
+				<td>Parameter X can only be a decimal number.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="bank-withdrawal-status">Bank withdrawal status</h4>
+	<p>Checks the status of a bank withdrawal request. This call can only be performed by your Main Account.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<!--<span class="emphasized">https://www.bitstamp.net/api/v2/transfer-from-main/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>-->
+					<span class="emphasized">https://www.bitstamp.net/api/v2/withdrawal/status/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td>
+					<span class="emphasized">ID of the withdrawal request.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized">Status of the withdrawal request.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong></td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-bank-withdrawal-status">
+		<span class="fa fa-arrow-circle-o-down"></span>Bank withdrawal status errors
+	</p>
+	<table class="table additional-margin" id="error-bank-withdrawal-status" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Please update your profile with your FATCA information, before performing withdrawal status checks.</strong></td>
+				<td>You must have the FATCA information updated on your profile, before using this service.</td>
+			</tr>
+			<tr>
+				<td><strong>Performing bank withdrawal status checks with sub account API keys is not supported.</strong></td>
+				<td>This API endpoint can only be utilized by your main account.</td>
+			</tr>
+			<tr>
+				<td><strong>Missing parameters: [...].</strong></td>
+				<td>Parameters stated in the list ([...]) are required for this call.</td>
+			</tr>
+			<tr>
+				<td><strong>No bank withdrawal with id=X found.</strong></td>
+				<td>Could not find any bank withdrawal with the id X.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="bank-withdrawal-cancel">Cancel bank withdrawal</h4>
+	<p>Cancels a bank withdrawal request. This call can only be performed by your Main Account.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<!--<span class="emphasized">https://www.bitstamp.net/api/v2/transfer-from-main/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>-->
+					<span class="emphasized">https://www.bitstamp.net/api/v2/withdrawal/cancel/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td>
+					<span class="emphasized">ID of the withdrawal request.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td><strong>id</strong></td>
+				<td><span class="emphasized">ID of the cancelled withdrawal request.</span></td>
+			</tr>
+			<tr>
+				<td><strong>amount</strong></td>
+				<td><span class="emphasized">Amount of the cancelled withdrawal request.</span></td>
+			</tr>
+			<tr>
+				<td><strong>currency</strong></td>
+				<td><span class="emphasized">Currency of the cancelled withdrawal request.</span></td>
+			</tr>
+			<tr>
+				<td><strong>account_currency</strong></td>
+				<td><span class="emphasized">Account currency (balance currency from which the withdrawal was requested) of the cancelled withdrawal request.</span></td>
+			</tr>
+			<tr>
+				<td><strong>type</strong></td>
+				<td><span class="emphasized">The type of the cancelled withdrawal request.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong></td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-bank-withdrawal-cancel">
+		<span class="fa fa-arrow-circle-o-down"></span>Cancel bank withdrawal errors
+	</p>
+	<table class="table additional-margin" id="error-bank-withdrawal-cancel" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Please update your profile with your FATCA information, before cancelling withdrawals.</strong></td>
+				<td>You must have the FATCA information updated on your profile, before using this service.</td>
+			</tr>
+			<tr>
+				<td><strong>Cancelling bank withdrawals with sub account API keys is not supported.</strong></td>
+				<td>This API endpoint can only be utilized by your main account.</td>
+			</tr>
+			<tr>
+				<td><strong>Missing parameters: [...].</strong></td>
+				<td>Parameters stated in the list ([...]) are required for this call.</td>
+			</tr>
+			<tr>
+				<td><strong>No active bank withdrawal with id=X found.</strong></td>
+				<td>Could not find any active bank withdrawal with the id X. Will 
+return the same response for already cancelled withdrawal requests.</td>
+			</tr>
+			<tr>
+				<td><strong>Cannot cancel a withdrawal in process (id=X).</strong></td>
+				<td>The bank withdrawal request with id=X is currently being processed and cannot be cancelled.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="liquidation-address-new">New liquidation address</h4>
+	<p>Creates new liquidation address which will automatically sell your BTC for specified liquidation_currency.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/liquidation_address/new/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>liquidation_currency</strong></td>
+				<td>
+					<span class="emphasized">Deposited BTCs will be automatically converted to liquidation_currency.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td><span class="emphasized">Address set for automatic conversion.</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong></td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-liquidation-address-new">
+		<span class="fa fa-arrow-circle-o-down"></span>New liquidation address errors
+	</p>
+	<table class="table additional-margin" id="error-liquidation-address-new" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Please update your profile with your FATCA information, before cancelling withdrawals.</strong></td>
+				<td>You must have the FATCA information updated on your profile, before using this service.</td>
+			</tr>
+			<tr>
+				<td><strong>Missing liquidation_currency parameter.</strong></td>
+				<td>Parameter liquidation_currency is required for this call.</td>
+			</tr>
+			<tr>
+				<td><strong>Invalid currency.</strong> or <strong>Currency [...] not supported.</strong></td>
+				<td>Invalid liquidation_currency.</td>
+			</tr>
+			<tr>
+				<td><strong>Cannot create new address, please try later.</strong></td>
+				<td>At the moment we can't create new deposit address. Try again later.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4 id="liquidation-address-info">Liquidation address info</h4>
+	<p>Shows transactions (BTC to liquidation_currency) for liquidation address.</p>
+	<table class="table additional-margin">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Request</strong></td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>
+					<span class="emphasized">https://www.bitstamp.net/api/v2/liquidation_address/info/</span><span title="This is an API v2 endpoint." class="v2-mark">API v2</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Request parameters</strong></td>
+			</tr>
+			<tr>
+				<td><strong>key</strong></td>
+				<td>
+					<span class="emphasized">API key.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>signature</strong></td>
+				<td>
+					<span class="emphasized">Signature.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>nonce</strong></td>
+				<td>
+					<span class="emphasized">Nonce.</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong> (Optional)</td>
+				<td>
+					<span class="emphasized">Shows transactions for specific liquidation address or for all users liquidation addresses.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: success</td>
+			</tr>
+			<tr>
+				<td><strong>address</strong></td>
+				<td><span class="emphasized">Address for automatic conversion.</span></td>
+			</tr>
+			<tr>
+				<td><strong>currency_pair</strong></td>
+				<td><span class="emphasized">Currency pair used for automatic conversion.</span></td>
+			</tr>
+			<tr>
+				<td><strong>transactions</strong></td>
+				<td><span class="emphasized">List of JSON objects which include 
+order_id(conversion order id), count(number of transactions) and trades 
+(JSON with exchange_rate, btc_amount and fees).</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>Response (JSON)</strong>: failure</td>
+			</tr>
+			<tr>
+				<td><strong>status</strong></td>
+				<td><span class="emphasized">"error"</span></td>
+			</tr>
+			<tr>
+				<td><strong>reason</strong></td>
+				<td><span class="emphasized">The reason for the error.</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="collapsible no-margins" data-target="error-liquidation-address-info">
+		<span class="fa fa-arrow-circle-o-down"></span>Liquidation address info errors
+	</p>
+	<table class="table additional-margin" id="error-liquidation-address-info" style="display: none;">
+		<tbody>
+			<tr>
+				<td colspan="2"><strong><a href="#authentication-errors">Authentication errors</a></strong></td>
+			</tr>
+			<tr>
+				<td><strong>Please update your profile with your FATCA information, before cancelling withdrawals.</strong></td>
+				<td>You must have the FATCA information updated on your profile, before using this service.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+		</div>
+	</div>
+</div></div>
+		
+		<script type="text/javascript" charset="utf-8" src="HTTP%20API%20-%20Bitstamp_files/jquery.js"></script>
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/jquery_002.js"></script>
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/perfect-scrollbar.js" charset="utf-8"></script>
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/analytics.js"></script>
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/utils.js"></script>
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/locd.js"></script><script type="text/javascript" charset="utf-8" src="HTTP%20API%20-%20Bitstamp_files/bootstrap-tooltip.js"></script><!-- http://twitter.github.com/bootstrap/javascript.html#tooltips -->
+		<script type="text/javascript" charset="utf-8" src="HTTP%20API%20-%20Bitstamp_files/bootstrap-dropdown.js"></script><!-- http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+		<script type="text/javascript" charset="utf-8" src="HTTP%20API%20-%20Bitstamp_files/bootstrap-modal.js"></script><!-- http://twitter.github.com/bootstrap/javascript.html#modals -->
+		<script type="text/javascript" charset="utf-8" src="HTTP%20API%20-%20Bitstamp_files/bootstrap-transition.js"></script>
+		<script type="text/javascript" charset="utf-8" src="HTTP%20API%20-%20Bitstamp_files/jquery_003.js"></script><!-- http://webcloud.se/code/jQuery-Placeholder/ -->
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/highstock.js"></script>
+		<script type="text/javascript" charset="utf-8" src="HTTP%20API%20-%20Bitstamp_files/jQueryRotate.js"></script><!-- http://code.google.com/p/jqueryrotate/ -->
+		<script type="text/javascript" charset="utf-8" src="HTTP%20API%20-%20Bitstamp_files/iphone-style-checkboxes.js"></script><!-- http://ios-checkboxes.awardwinningfjords.com/ -->
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/header.js"></script>
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/common.js"></script>
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/trade-pairs.js"></script>
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/base.js"></script>
+		<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/trade-accounts.js"></script>
+		
+<script type="text/javascript" src="HTTP%20API%20-%20Bitstamp_files/api.js"></script>
+
+	
+
+</body></html>
